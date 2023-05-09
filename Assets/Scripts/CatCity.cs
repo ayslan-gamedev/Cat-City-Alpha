@@ -7,8 +7,9 @@
         public UnityEvent[] dialogueEvents;
     }
 
-    public class GlobalVariables 
+    public class GlobalValues 
     {
         public const string GAME_MANAGER = "GameManager";
+        public readonly string PLAYER_NAME = "Player";
     }
 }

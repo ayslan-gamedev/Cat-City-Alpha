@@ -24,9 +24,9 @@ namespace CatCity.Player
             {
                 currentAnimatorController.SetBool("Move", false);
             }
+
             currentAnimatorController.SetFloat("SpeedX", (int)playerDirection.x);
             currentAnimatorController.SetFloat("SpeedY", (int)playerDirection.y);
-
         }
     }
 }

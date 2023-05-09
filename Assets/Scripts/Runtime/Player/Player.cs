@@ -13,17 +13,17 @@ public class Player : MonoBehaviour
     public Animator animatorController;
     #endregion
 
-    private PlayerMovement movementPlayer;
-    private PlayerAnimation animationPlayer;
+    public PlayerMovement MovementPlayer { get; private set; }
+    public PlayerAnimation AnimationPlayer { get; private set; }
 
     // Called on the first freame object
     void Start()
     {
-        movementPlayer = new PlayerMovement(); // set player movement
-        movementPlayer.StartScript(navAgent, point, playerObject, speed, mainCamera); // start player movement script
+        MovementPlayer = new PlayerMovement(); // set player movement
+        MovementPlayer.StartScript(navAgent, point, playerObject, speed, mainCamera); // start player movement script
         
-        animationPlayer = new PlayerAnimation(); // set player animator
-        animationPlayer.StartAnimator(animatorController); // start player animator script
+        AnimationPlayer = new PlayerAnimation(); // set player animator
+        AnimationPlayer.StartAnimator(animatorController); // start player animator script
 
         pausePlayer = false; // unpause player to move
     }
@@ -39,21 +39,37 @@ public class Player : MonoBehaviour
             return;
         }
 
-        movementPlayer.UpdateMovement(); // update movement
-        animationPlayer.AnimMovement(movementPlayer.PlayerDirection()); // update animator
+        MovementPlayer.UpdateMovement(); // update movement
+        AnimationPlayer.AnimMovement(MovementPlayer.PlayerDirection()); // update animator
     }
 
     #region External Commands
     // change the movement mode
     public void ChangeMovementMode(MovementMode newMode)
     {
-        movementPlayer.ChangeMoveMode(newMode);
+        MovementPlayer.ChangeMoveMode(newMode);
     }
 
     // Alternt in player pause and unpause
     public void PausePlayerMovement()
     {
         pausePlayer = !pausePlayer;
+    }
+
+    // Return if player is in movement
+    public bool PlayerInMovement()
+    {
+        Vector2 playerDirection;
+        playerDirection = MovementPlayer.PlayerDirection();
+
+        if((int)playerDirection.x != 0 || (int)playerDirection.y != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     #endregion
 }
