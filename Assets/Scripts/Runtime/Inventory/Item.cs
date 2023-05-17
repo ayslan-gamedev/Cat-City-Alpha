@@ -3,7 +3,7 @@
     [System.Serializable]
     public class Item
     {
-        public string nameOfItem;
+        public string name;
         public int quant;
     }
 }
