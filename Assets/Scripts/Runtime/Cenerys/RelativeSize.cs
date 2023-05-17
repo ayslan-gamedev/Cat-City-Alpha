@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[AddComponentMenu("Cat City/Dynamics/RelativeSize")]
 public class RelativeSize : MonoBehaviour
 {
     public Transform reduze;

@@ -2,6 +2,7 @@
 using UnityEngine.AI;
 using CatCity.Player;
 
+[AddComponentMenu("Cat City/Payer Controller")]
 public class Player : MonoBehaviour
 {
     #region Public Components
@@ -28,8 +29,11 @@ public class Player : MonoBehaviour
         pausePlayer = false; // unpause player to move
     }
 
-    public bool pausePlayer { get; private set; } // current movement player option
-
+    /// <summary>
+    /// current movement player option
+    /// </summary>
+    public bool pausePlayer { get; private set; } 
+    
     // Called by freame
     void Update()
     {
@@ -44,19 +48,25 @@ public class Player : MonoBehaviour
     }
 
     #region External Commands
-    // change the movement mode
+    /// <summary>
+    /// Change the movement mode
+    /// </summary>
     public void ChangeMovementMode(MovementMode newMode)
     {
         MovementPlayer.ChangeMoveMode(newMode);
     }
 
-    // Alternt in player pause and unpause
+    /// <summary>
+    /// Alternt in player pause and unpause
+    /// </summary>
     public void PausePlayerMovement()
     {
         pausePlayer = !pausePlayer;
     }
 
-    // Return if player is in movement
+    /// <summary>
+    /// Return if player is in movement
+    /// </summary>
     public bool PlayerInMovement()
     {
         Vector2 playerDirection;

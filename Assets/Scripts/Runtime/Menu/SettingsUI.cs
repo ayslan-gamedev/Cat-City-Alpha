@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using CatCity;
 
+[AddComponentMenu("Cat City/UI Options")]
 public class SettingsUI : MonoBehaviour
 {
     public Dropdown dropResolutions;

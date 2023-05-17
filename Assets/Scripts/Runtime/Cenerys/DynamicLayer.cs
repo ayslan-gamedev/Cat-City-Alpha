@@ -1,6 +1,7 @@
 ﻿using CatCity;
 using UnityEngine;
 
+[AddComponentMenu("Cat City/Dynamics/Layers")]
 public class DynamicLayer : MonoBehaviour {
 
     public float minPosY;

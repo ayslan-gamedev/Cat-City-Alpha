@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuButtons : MonoBehaviour
+[AddComponentMenu("Cat City/Scene Manager")]
+public class SceneOptions : MonoBehaviour
 {
     public void LoadSceneButton(string sceneName)
     {
-        Debug.Log("Try load");
         SceneManager.LoadScene(sceneName);
     }
 

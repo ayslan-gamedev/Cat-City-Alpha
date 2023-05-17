@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
+[AddComponentMenu("Cat City/Scene Events")]
 public class SceneEvents : MonoBehaviour
 {
     private GlobalVariables globalVariables;

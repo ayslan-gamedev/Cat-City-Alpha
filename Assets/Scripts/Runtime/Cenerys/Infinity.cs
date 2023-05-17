@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TreeEditor;
 using UnityEngine;
 
+[AddComponentMenu("Cat City/Dynamics/Infinity")]
 public class Infinity : MonoBehaviour
 {
     public GameObject[] objectsToInstantiate;

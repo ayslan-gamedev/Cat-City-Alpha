@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
+[AddComponentMenu("Cat City/Interative")]
 public class InterativeObjects : MonoBehaviour
 {
     private const string PLAYER_TAG = "Player";

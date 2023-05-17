@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menus/Language Menu.unity
-    guid: dd0d36d9317043a43acb1ca24a48154e
-  - enabled: 1
     path: Assets/Scenes/Menus/Main Menu.unity
     guid: 30ec42e901a93fd4abfe968649b4164e
   - enabled: 1
-    path: Assets/Scenes/Cenerys/quarto da rosy.unity
-    guid: 1728854ce430eac4bbbd5045b26c58ca
+    path: Assets/Scenes/Menus/Language Menu.unity
+    guid: dd0d36d9317043a43acb1ca24a48154e
+  - enabled: 1
+    path: Assets/Scenes/Cenerys/Infinity.unity
+    guid: 03a7a6d290c4de840ac61f1151df46fe
+  - enabled: 1
+    path: Assets/Scenes/Cenerys/roses room.unity
+    guid: 702d8a03e32aea9408d226e0117638ba
+  - enabled: 1
+    path: Assets/Scenes/Cenerys/School.unity
+    guid: 09493f235f0c71b4f9a5c7bec86f4b6d
   m_configObjects: {}

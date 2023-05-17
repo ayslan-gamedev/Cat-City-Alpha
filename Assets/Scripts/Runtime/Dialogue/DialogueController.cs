@@ -5,6 +5,7 @@ using CatCity.DialogueElements;
 using TMPro;
 using UnityEngine.EventSystems;
 
+[AddComponentMenu("Cat City/Dialogue/Controller")]
 public class DialogueController : MonoBehaviour
 {
     #region Initialize
@@ -13,7 +14,9 @@ public class DialogueController : MonoBehaviour
 
     private const int firstDialogue = 0;
 
-    // Called externaly by any interaction script to starts the system, dialogue file required
+    /// <summary>
+    /// Called externaly by any interaction script to starts the system, dialogue file required
+    /// </summary>
     public void StartDialogue(DialogueFolder dialogueFile)
     {
         currentDialogueFile = dialogueFile; // set current dialogue file defined by a external call
@@ -25,7 +28,9 @@ public class DialogueController : MonoBehaviour
         WriteDialogue(); // start the dialogue
     }
 
-    // Initialize the UI start values
+    /// <summary>
+    /// Initialize the UI start values
+    /// </summary>
     private void StartUI()
     {
         theDialogueUIObect.SetActive(true); // active dialogue UI
@@ -35,7 +40,9 @@ public class DialogueController : MonoBehaviour
         SetChoiceUI();
     }
 
-    // Get the dialogue data on dialogue folder using DialogueDataReader
+    /// <summary>
+    /// Get the dialogue data on dialogue folder using DialogueDataReader
+    /// </summary>
     private void LoadDialogueData(int nextId)
     {
         DialogueReader reader = new DialogueReader();
@@ -55,7 +62,9 @@ public class DialogueController : MonoBehaviour
 
     private int currentDalogueLineInUi = 0;
 
-    // write the UI Elements of dialogue
+    /// <summary>
+    /// write the UI Elements of dialogue
+    /// </summary>
     private void SetDialogueUI()
     {
         dialogueUI = new UIDialogueObject(); // load a generic class of the UI of dialogue
@@ -67,7 +76,10 @@ public class DialogueController : MonoBehaviour
     }
 
     DialogueWriter writer;
-    // called to write the main text of dialog
+    
+    /// <summary>
+    /// called to write the main text of dialog
+    /// </summary>
     void WriteDialogue()
     {
         writer = new DialogueWriter(); // load a generic class of the UI Dialogue Objects
@@ -78,7 +90,9 @@ public class DialogueController : MonoBehaviour
         SetDialogueEvent(); // call the event in dialogue if have
     }
 
-    // Called by player on UI when press the next button
+    /// <summary>
+    /// Called by player on UI when press the next button
+    /// </summary>
     public void Button()
     {
         // verify if the dialogue text is total writed, and sets pass to a new dialogue line
@@ -111,7 +125,9 @@ public class DialogueController : MonoBehaviour
     Choice[] choices; // current Choices from dialog file
     UIChoicesObject uiChoice; // generic class of the UI of choices
 
-    // write the values of uiChoices
+    /// <summary>
+    /// write the values of uiChoices
+    /// </summary>
     private void SetChoiceUI()
     {
         uiChoice = new UIChoicesObject(); // set a generic class of Choices UI
@@ -131,7 +147,9 @@ public class DialogueController : MonoBehaviour
 
     ChoicesWriter writerChoice;
 
-    // write the choices in UI
+    /// <summary>
+    /// write the choices in UI
+    /// </summary>
     private void WriteChoiceUI()
     {
         writerChoice = new ChoicesWriter(); // load a generic class of the UI Choices Object
@@ -140,7 +158,9 @@ public class DialogueController : MonoBehaviour
         writerChoice.WriteChoice(choices, uiChoice);
     }
 
-    // Get the value of choice selected by player in UI
+    /// <summary>
+    /// Get the value of choice selected by player in UI
+    /// </summary>
     public void ButtonChoice(int choiceId)
     {
         int a = choices[choiceId].nextDialogueID;
@@ -154,7 +174,9 @@ public class DialogueController : MonoBehaviour
     #region Event
     public DialogueEvents sceneEvents; // object manager dialogue events in scene
 
-    // Invoke the unity dialogue in event if have 
+    /// <summary>
+    /// Invoke the unity dialogue in event if have 
+    /// </summary>
     private void SetDialogueEvent()
     {
         string @event = lines[currentDalogueLineInUi].callEvent; // get event name from current line
