@@ -9,14 +9,14 @@ namespace CatCity
         /// <summary>
         /// return the current player invetory running
         /// </summary>
-        public PlayerInventory currentPlayerInventory { get; private set; }
+        public PlayerInventory CurrentPlayerInventory;
         
         /// <summary>
         /// Set a new inventory player
         /// </summary>
         public void SetInventory()
         {
-            currentPlayerInventory = new PlayerInventory();
+            CurrentPlayerInventory = new PlayerInventory();
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace CatCity
         {
             if(_inventory != null)
             {
-                currentPlayerInventory = _inventory;
+                CurrentPlayerInventory = _inventory;
             }
             else
             {
@@ -41,7 +41,7 @@ namespace CatCity
         {
             byte itemFound = 0;
 
-            foreach(Item item in currentPlayerInventory.InventoryItens)
+            foreach(Item item in CurrentPlayerInventory.InventoryItens)
             {
                 if(item.name == newItem.name)
                 {
@@ -53,7 +53,7 @@ namespace CatCity
 
             if(itemFound != 1)
             {
-                currentPlayerInventory.InventoryItens.Add(newItem);
+                CurrentPlayerInventory.InventoryItens.Add(newItem);
             }
         }
 
@@ -86,13 +86,13 @@ namespace CatCity
         /// </summary>
         public void RemoveItem(Item itemRemove)
         {
-            var item = currentPlayerInventory.InventoryItens.FirstOrDefault(x => x.name == itemRemove.name);
+            var item = CurrentPlayerInventory.InventoryItens.FirstOrDefault(x => x.name == itemRemove.name);
             if(item != null)
             {
                 item.quant -= itemRemove.quant;
                 if(item.quant <= 0)
                 {
-                    currentPlayerInventory.InventoryItens.Remove(item);
+                    CurrentPlayerInventory.InventoryItens.Remove(item);
                 }
             }
         }
