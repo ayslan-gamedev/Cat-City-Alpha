@@ -243,13 +243,5 @@ public class DialogueController : MonoBehaviour
             }
         }
     }
-    #endregion
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            Button();
-        }
-    }
+    #endregion    
 }
