@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a31cd179eb0d154eaa87be3993f1872, type: 3}
-  m_Name: LoranjeFolder
+  m_Name: Rose
   m_EditorClassIdentifier: 
   gameDialoguesList:
-  - {fileID: 11400000, guid: f4827f5dfc63b894f91f6d388b3a4a4b, type: 2}
+  - {fileID: 11400000, guid: 1428fd185968e354ab93890655a3dcb2, type: 2}

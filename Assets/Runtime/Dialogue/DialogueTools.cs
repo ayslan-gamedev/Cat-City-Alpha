@@ -13,7 +13,7 @@ namespace CatCity.Dialogue
 
         /// <summary>
         /// Set the dialogue language
-        /// </summary>
+        /// </summary>s
         public void GetLanguage()
         {
             GameManager languageSettings;
@@ -83,9 +83,12 @@ namespace CatCity.Dialogue
         /// <param name="writeMode">Select the form to write the text</param>
         /// <param name="line">Text to Write</param>
         /// <param name="dialogueUI">The text field in unity</param>
-        public void WriteDialogue(WriteMode writeMode, DialogueLine line, UIDialogueObject dialogueUI)
+        public void WriteDialogue(WriteMode writeMode, DialogueLine line, UIDialogueObject dialogueUI, bool? cleanData)
         {
-            ClearData(dialogueUI);
+            if(cleanData != null && cleanData == true)
+            {
+                ClearData(dialogueUI);
+            }
 
             switch(writeMode)
             {
@@ -183,7 +186,11 @@ namespace CatCity.Dialogue
         /// <param name="dialogueUI">Object with the ui objects in screen</param>
         private void WriteInstant(DialogueLine line, UIDialogueObject dialogueUI)
         {
-            dialogueUI.protait.sprite = line.protait;
+            if(line.protait)
+            {
+                dialogueUI.protait.sprite = line.protait;
+            }
+            
             dialogueUI.speakerText.text = line.speaker;
             dialogueUI.dialogueText.text = line.text;
         }

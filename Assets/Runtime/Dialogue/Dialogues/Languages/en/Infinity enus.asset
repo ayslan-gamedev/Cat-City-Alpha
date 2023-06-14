@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431e897b462fd8141bbf5886285460c7, type: 3}
+  m_Name: Infinity enus
+  m_EditorClassIdentifier: 
+  gameDialogues:
+  - linesList:
+    - speaker: 
+      text: As fast as the speed of the fans?
+      protait: {fileID: 0}
+      event: []
+    - speaker: 
+      text: "That\xB4s right. I\xB4ll be the mage, the main star, the protagonist
+        of this story"
+      protait: {fileID: 0}
+      event: []
+    - speaker: 
+      text: "You\xB4re welcome, son. I want to see you happy"
+      protait: {fileID: 0}
+      event: []
+    - speaker: 
+      text: "We\xB4re Catz on the table, that\xB4s right"
+      protait: {fileID: 0}
+      event: []
+    choicesList: []
+    event: []

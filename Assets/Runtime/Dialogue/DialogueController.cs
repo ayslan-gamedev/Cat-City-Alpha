@@ -9,10 +9,20 @@ using TMPro;
 public class DialogueController : MonoBehaviour
 {
     #region Initialize
-    private DialogueFolder currentDialogueFile; // the current dialogue file seted
-    public GameObject theDialogueUIObect; 
+    /// <summary>
+    /// The dialogue file to be read
+    /// </summary>
+    public DialogueFolder CurrentDialogueFile { private get; set; }
 
-    private const int firstDialogue = 0;
+    /// <summary>
+    /// The Game object parent of all dialogue objects
+    /// </summary>
+    public GameObject theDialogueUIObect;
+
+    /// <summary>
+    /// The first line how will be read by script in dialogue folder
+    /// </summary>
+    public int FirstDialogue { private get; set; }
 
     private const string PLAYER_GAMEOBJECT = "PlayerManager";
 
@@ -22,13 +32,13 @@ public class DialogueController : MonoBehaviour
     /// <param name="dialogueFile">The object dialogue in assets</param>
     public void StartDialogue(DialogueFolder dialogueFile)
     {
-        currentDialogueFile = dialogueFile; // set current dialogue file defined by a external call
+        CurrentDialogueFile = dialogueFile; // set current dialogue file defined by a external call
 
-        LoadDialogueData(firstDialogue); // load data of dialogue file
+        LoadDialogueData(FirstDialogue); // load data of dialogue file
         
         StartUI(); // initialize UI
 
-        WriteDialogue(); // start the dialogue
+        WriteDialogue(true); // start the dialogue
 
         GameObject.Find(PLAYER_GAMEOBJECT).GetComponent<Player>().PausePlayer = false;
     }
@@ -53,25 +63,44 @@ public class DialogueController : MonoBehaviour
         DialogueReader reader = new DialogueReader();
 
         // Gets values
-        lines = reader.DialogueLines(currentDialogueFile, nextId);
-        choices = reader.DialogueChoices(currentDialogueFile, nextId);
-        events = reader.EventDialogue(currentDialogueFile, nextId);
+        Lines = reader.DialogueLines(CurrentDialogueFile, nextId);
+        choices = reader.DialogueChoices(CurrentDialogueFile, nextId);
+        events = reader.EventDialogue(CurrentDialogueFile, nextId);
     }
     #endregion
 
     #region Dialogue
-    public TextMeshProUGUI UI_dialogueText, UI_speakerText;
-    public Image UI_dialogueImage;
+    /// <summary>
+    /// current lines of dialogue
+    /// </summary>
+    public DialogueLine[] Lines { get; private set; }
 
-    DialogueLine[] lines; // current lines of dialogue
     UIDialogueObject dialogueUI; // generic class of the UI of dialogue
 
-    private int currentDalogueLineInUi = 0;
+    /// <summary>
+    /// The current dialogue line
+    /// </summary>
+    public int CurrentDalogueLineInUi { get; set; }
+
+    /// <summary>
+    /// the Text Mesh Pro object to show the dialgue text
+    /// </summary>
+    public TextMeshProUGUI UI_dialogueText;
+
+    /// <summary>
+    /// the Text Mesh Pro object to show the speaker of dialgue text
+    /// </summary>
+    public TextMeshProUGUI UI_speakerText;
+
+    /// <summary>
+    /// the image objecgt to show the image of speaker
+    /// </summary>
+    public Image UI_dialogueImage;
 
     /// <summary>
     /// write the UI Elements of dialogue
     /// </summary>
-    private void SetDialogueUI()
+    public void SetDialogueUI()
     {
         dialogueUI = new UIDialogueObject(); // load a generic class of the UI of dialogue
 
@@ -84,14 +113,14 @@ public class DialogueController : MonoBehaviour
     DialogueWriter writer;
     
     /// <summary>
-    /// called to write the main text of dialog
+    /// write the main text of dialog
     /// </summary>
-    void WriteDialogue()
+    public void WriteDialogue(bool ClearData)
     {
         writer = new DialogueWriter(); // load a generic class of the UI Dialogue Objects
 
         // sets the value in UI
-        writer.WriteDialogue(WriteMode.Instant,lines[currentDalogueLineInUi], dialogueUI);
+        writer.WriteDialogue(WriteMode.Instant,Lines[CurrentDalogueLineInUi], dialogueUI, ClearData);
 
         DialogueEvent(); // call the event in dialogue if have
     }
@@ -104,7 +133,7 @@ public class DialogueController : MonoBehaviour
         // verify if the dialogue text is total writed, and sets pass to a new dialogue line
         if(writer.WritingStatus() == 0)
         {
-            currentDalogueLineInUi ++;
+            CurrentDalogueLineInUi ++;
         }
         else
         {
@@ -113,9 +142,9 @@ public class DialogueController : MonoBehaviour
         
         Debug.Log(writer.WritingStatus() == 0);
 
-        if(currentDalogueLineInUi < lines.Length) // verfiy if the new dialogue line exist
+        if(CurrentDalogueLineInUi < Lines.Length) // verfiy if the new dialogue line exist
         {
-            WriteDialogue(); // write the new line
+            WriteDialogue(true); // write the new line
         }
         else
         {
@@ -189,9 +218,9 @@ public class DialogueController : MonoBehaviour
         }
 
         writerChoice.CloseChoices(uiChoice);
-        currentDalogueLineInUi = 0;
+        CurrentDalogueLineInUi = 0;
         LoadDialogueData(a);
-        WriteDialogue();
+        WriteDialogue(true);
     }
     #endregion
 
@@ -204,9 +233,9 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private void DialogueEvent()
     {
-        for(int i = 0; i < lines[currentDalogueLineInUi].@event.Count; i++)
+        for(int i = 0; i < Lines[CurrentDalogueLineInUi].@event.Count; i++)
         {
-            string @event = lines[currentDalogueLineInUi].@event[i]; // get event name from current line
+            string @event = Lines[CurrentDalogueLineInUi].@event[i]; // get event name from current line
     
             // checks if have some event be called in current line
             if(@event != string.Empty)

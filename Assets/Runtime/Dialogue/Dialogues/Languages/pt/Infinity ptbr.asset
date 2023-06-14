@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431e897b462fd8141bbf5886285460c7, type: 3}
+  m_Name: Infinity ptbr
+  m_EditorClassIdentifier: 
+  gameDialogues:
+  - linesList:
+    - speaker: 
+      text: "T\xE3o r\xE1pido quando a velocidade dos ventiladores?"
+      protait: {fileID: 0}
+      event: []
+    - speaker: 
+      text: "Isso mesmo. Eu serei a maga, a estrela principal, a protagonista desta
+        hist\xF3ria"
+      protait: {fileID: 0}
+      event: []
+    - speaker: 
+      text: "N\xE3o h\xE1 de que filho, quero te ver feliz."
+      protait: {fileID: 0}
+      event: []
+    - speaker: 
+      text: "Somos Cats on the table, \xE9 isso a\xED!"
+      protait: {fileID: 0}
+      event: []
+    choicesList: []
+    event: []

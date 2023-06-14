@@ -10,109 +10,113 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 431e897b462fd8141bbf5886285460c7, type: 3}
-  m_Name: Loranje
+  m_Name: Loranje es
   m_EditorClassIdentifier: 
   gameDialogues:
   - linesList:
     - speaker: Loranje
-      text: "O que est\xE1 acontecendo?"
+      text: "\xBFque pasa?"
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
       event: []
     - speaker: Throy
-      text: "Eu n\xE3o sei Loranje... oque eu quero da vida...."
+      text: "No s\xE9... que quiero de la vida, loranje."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event: []
     - speaker: Loranje
-      text: Como assim Throy?
+      text: "\xBFQu\xE9 quieres decir con eso, Throy?"
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
       event: []
     - speaker: Throy
-      text: "Eu sempre vi todos tendo sonhos incr\xEDveis, objetivos para si."
+      text: "Siempre he visto a todos teniendo sue\xF1os incre\xEDbles, metas para
+        s\xED mismos."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event:
       - 
     - speaker: Throy
-      text: "Seja viajar para o espa\xE7o..."
+      text: Sea viajar al espacio...
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
       - imgainacao blink
     - speaker: Throy
-      text: Virar um apresentador de TV...
+      text: "Convertirse en presentador de televisi\xF3n..."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
       - imagincao 2
     - speaker: Throy
-      text: Entender o mundo nas menores celulas....
+      text: "Comprender el mundo en las c\xE9lulas m\xE1s peque\xF1as..."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
       - imaginacao loranje
     - speaker: Throy
-      text: "Por que eu n\xE3o tenho isso?"
+      text: "\xBFPor qu\xE9 no tengo esto?"
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event: []
     - speaker: Throy
-      text: Quem sou eu?
+      text: "\xBFQui\xE9n soy?"
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event: []
     - speaker: Throy
-      text: "Eu s\xF3 queria... ser um furry normal...."
+      text: "Solo quer\xEDa... ser como un furry normal..."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
       - throy senta
     - speaker: Throy
-      text: "Com sonhos e esperan\xE7as...."
+      text: "Con sue\xF1os y esperanza..."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event: []
     - speaker: Throy
-      text: Mas nem sei oque eu gosto.
+      text: "Pero ni siquiera s\xE9 lo que me gusta."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
       - thory chora
     - speaker: Loranje
-      text: Throy...
+      text: "Throy\u2026"
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
       event:
       - lorane levanta
     - speaker: Loranje
-      text: "Primeiro, voc\xEA n\xE3o prescisa ser como ningu\xE9m"
+      text: "Primero, no tienes que ser como los dem\xE1s..."
       protait: {fileID: 21300000, guid: 27afe3ec9ece2264c80af7905ef7e03d, type: 3}
       event: []
     - speaker: Throy
-      text: Mas como eu vou saber o que fazer?
+      text: "Pero, \xBFc\xF3mo sabr\xE9 qu\xE9 hacer?"
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
       - throy senta
     - speaker: Loranje
-      text: "Mas, j\xE1 que voc\xEA quer tanto descobrir isso vou te dar uma ideia."
+      text: Como tienes tantas ganas de averiguarlo, te doy una idea.
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
       event: []
     - speaker: Loranje
-      text: "Se voc\xEA n\xE3o pode se ajudar por n\xE3o ter um sonho, voc\xEA pode
-        ajudar os outros a realizar os sonhos deles, assim tentando achar o seu tamb\xE9m."
+      text: "Si no puedes ayudarte a ti mismo porque no tienes un sue\xF1o, puedes
+        ayudar a otros a cumplir sus sue\xF1os, mientras tratas de encontrar el tuyo
+        tambi\xE9n.   "
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
       event: []
     - speaker: Thory
-      text: "Eu n\xE3o sei, mas acho que \xE9 uma \xF3tima ideia tentar fazer isso."
+      text: "No lo s\xE9, pero creo que es una gran idea intentarlo."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event: []
     - speaker: Loranje
-      text: Espero que essa resposta tenha te ajudado
+      text: Espero que esta respuesta te haya ayudado.
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
       event: []
     choicesList:
-    - text: Obrigado
+    - text: Gracias
       nextDialogueID: 109
-    - text: "Voc\xEA \xE9 uma \xF3tima amiga Loranje, obrigado."
+    - text: Eres una gran amiga Loranje
       nextDialogueID: 109
-    - text: Talvez me ajude
+    - text: "Quiz\xE1s me ayude"
       nextDialogueID: 109
-    - text: "Ainda n\xE3o sei..."
+    - text: "A\xFAn no lo s\xE9\u2026."
       nextDialogueID: 1
     event:
     - proxima cena
   - linesList:
     - speaker: Loranje
-      text: Tente Throy... apenas tente...
+      text: "17.Close Loranje\tThroy com rosto neutro.\tThroy: No lo s\xE9, pero
+        creo que es una gran idea intentarlo. Loranje: Espero que esta respuesta
+        te haya ayudadoThroy! Solo int\xE9ntalo\u2026 "
       protait: {fileID: 21300000, guid: 27afe3ec9ece2264c80af7905ef7e03d, type: 3}
       event: []
     choicesList: []
