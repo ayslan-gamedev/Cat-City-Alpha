@@ -24,8 +24,6 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     public int FirstDialogue { private get; set; }
 
-    private const string PLAYER_GAMEOBJECT = "PlayerManager";
-
     /// <summary>
     /// Called externaly by any interaction script to starts the system, dialogue file required
     /// </summary>

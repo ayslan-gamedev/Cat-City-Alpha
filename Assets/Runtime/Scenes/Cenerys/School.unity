@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 275033146}
   - component: {fileID: 275033145}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ MonoBehaviour:
   languageList: {fileID: 0}
   currentLanguage:
     name: pt-br
-    index: 1
+    index: 2
 --- !u!4 &275033146
 Transform:
   m_ObjectHideFlags: 0
@@ -2108,6 +2108,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 4cdec6a1259c0504fb9d4523fe03b282, type: 2}
           m_ObjectArgumentAssemblyTypeName: DialogueFolder, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 829479595}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

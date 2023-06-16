@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        InitializeInventory();
+        //InitializeInventory();
 
         saveManager = new SaveManager();
     
@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNewScene()
     {
-        saveManager.SaveObject = objectSave;
-        saveManager.Save(transform, playerInventory.CurrentPlayerInventory);
+        //saveManager.SaveObject = objectSave;
+        //saveManager.Save(transform, playerInventory.CurrentPlayerInventory);
     }
 
     public GlobalVariables currentVariables;
