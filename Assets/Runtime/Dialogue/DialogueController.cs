@@ -65,7 +65,7 @@ public class DialogueController : MonoBehaviour
         // Gets values
         Lines = reader.DialogueLines(CurrentDialogueFile, nextId);
         choices = reader.DialogueChoices(CurrentDialogueFile, nextId);
-        events = reader.EventDialogue(CurrentDialogueFile, nextId);
+        Events = reader.EventDialogue(CurrentDialogueFile, nextId);
     }
     #endregion
 
@@ -225,8 +225,15 @@ public class DialogueController : MonoBehaviour
     #endregion
 
     #region Event
-    public DialogueEvents sceneEvents; // object manager dialogue events in scene
-    public string[] events;
+    /// <summary>
+    /// object manager dialogue events in scene
+    /// </summary>
+    public DialogueEvents sceneEvents;
+
+    /// <summary>
+    /// List of all current name events in scene
+    /// </summary>
+    public string[] Events { get; private set; } 
 
     /// <summary>
     /// Invoke the unity dialogue event if have 
@@ -257,13 +264,13 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private void EndDialogueEvent()
     {
-        for(int i = 0; i < @events.Length; i++)
+        for(int i = 0; i < Events.Length; i++)
         {
-            if(events[i] != string.Empty)
+            if(Events[i] != string.Empty)
             {
                 if(sceneEvents != null)
                 {
-                    sceneEvents.CallEvent(events[i]); // calls the event
+                    sceneEvents.CallEvent(Events[i]); // calls the event
                 }
                 else
                 {
