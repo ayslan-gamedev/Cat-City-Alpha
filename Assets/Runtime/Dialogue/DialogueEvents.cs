@@ -21,17 +21,12 @@ namespace UnityEngine.EventSystems
                 return;
             }
 
-            Debug.Log("a");
-
             EventsLists = new List<DialogueEvent>();
 
             for(int i = 0; i < events.Length; i++)
             {
                 EventsLists.Add(events[i]);
             }
-
-            Debug.Log("b");
-
         }
 
         /// <summary>

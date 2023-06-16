@@ -39,8 +39,6 @@ public class DialogueController : MonoBehaviour
         StartUI(); // initialize UI
 
         WriteDialogue(true); // start the dialogue
-
-        GameObject.Find(PLAYER_GAMEOBJECT).GetComponent<Player>().PausePlayer = false;
     }
 
     /// <summary>
@@ -60,7 +58,7 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private void LoadDialogueData(int nextId)
     {
-        DialogueReader reader = new DialogueReader();
+        DialogueReader reader = new();
 
         // Gets values
         Lines = reader.DialogueLines(CurrentDialogueFile, nextId);
@@ -102,12 +100,14 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     public void SetDialogueUI()
     {
-        dialogueUI = new UIDialogueObject(); // load a generic class of the UI of dialogue
-
-        // sets the UI
-        dialogueUI.dialogueText = UI_dialogueText;
-        dialogueUI.speakerText = UI_speakerText;
-        dialogueUI.protait = UI_dialogueImage;
+        // load a generic class of the UI of dialogue and sets the UI
+        dialogueUI = new UIDialogueObject
+        {
+            // sets the UI
+            dialogueText = UI_dialogueText,
+            speakerText = UI_speakerText,
+            protait = UI_dialogueImage
+        };
     }
 
     DialogueWriter writer;
@@ -140,8 +140,6 @@ public class DialogueController : MonoBehaviour
             return;
         }
         
-        Debug.Log(writer.WritingStatus() == 0);
-
         if(CurrentDalogueLineInUi < Lines.Length) // verfiy if the new dialogue line exist
         {
             WriteDialogue(true); // write the new line

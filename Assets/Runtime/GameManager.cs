@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using CatCity;
+using System.Security.Cryptography;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
         InitializeInventory();
 
         saveManager = new SaveManager();
+    
     }
 
     #region Inventory
@@ -46,6 +48,11 @@ public class GameManager : MonoBehaviour
     public Languages languageList;
 
     public Language currentLanguage;
+
+    private void SetLanagueTest()
+    {
+        currentLanguage = languageList.languages.ToArray()[1];
+    }
 
     public void SeletLanguage(int LanguageIndex)
     {

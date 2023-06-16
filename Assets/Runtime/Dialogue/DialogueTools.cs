@@ -4,7 +4,6 @@ using CatCity.DialogueElements;
 
 namespace CatCity.Dialogue
 {
-
     #region Reader
     public class DialogueReader
     {
@@ -25,9 +24,11 @@ namespace CatCity.Dialogue
             }
             else
             {
-                currentLanguage = new Language();
-                currentLanguage.name = "default";
-                currentLanguage.index = 0;
+                currentLanguage = new Language
+                {
+                    name = "default",
+                    index = 0
+                };
             }
         }
 
