@@ -5,7 +5,7 @@ using CatCity.Player;
 [AddComponentMenu("Cat City/Payer Controller")]
 public class Player : MonoBehaviour
 {
-    #region Public Components
+    #region Components
     public NavMeshAgent navAgent;
     public GameObject playerObject;
     public Transform point;
@@ -20,13 +20,20 @@ public class Player : MonoBehaviour
     // Called on the first freame object
     void Start()
     {
+        SetMovementSript();
+        PausePlayer = false; // unpause player to move
+    }
+
+    /// <summary>
+    /// Start the movement player script 
+    /// </summary>
+    private void SetMovementSript()
+    {
         MovementPlayer = new PlayerMovement(); // set player movement
         MovementPlayer.StartScript(navAgent, point, playerObject, speed, mainCamera); // start player movement script
         
         AnimationPlayer = new PlayerAnimation(); // set player animator
         AnimationPlayer.StartAnimator(animatorController); // start player animator script
-
-        PausePlayer = false; // unpause player to move
     }
 
     /// <summary>
@@ -43,8 +50,15 @@ public class Player : MonoBehaviour
             return;
         }
 
-        MovementPlayer.UpdateMovement(); // update movement
-        AnimationPlayer.AnimMovement(MovementPlayer.PlayerDirection()); // update animator
+        if(MovementPlayer != null)
+        {
+            MovementPlayer.UpdateMovement(); // update movement
+            AnimationPlayer.AnimMovement(MovementPlayer.PlayerDirection()); // update animator
+        }
+        else
+        {
+            SetMovementSript();
+        }
     }
 
     #region External Commands

@@ -7,11 +7,9 @@ public class SceneOptions : MonoBehaviour
 {
     public void LoadSceneButton(string sceneName)
     {
-        EditorValues globalVariables = new();
-
-        if(GameObject.Find(globalVariables.GAME_MANAGER) != null)
+        if(GameObject.Find(EditorVariables.GAME_MANAGER.ToString()) != null)
         {
-            GameObject.Find(globalVariables.GAME_MANAGER).GetComponent<GameManager>().LoadNewScene();
+            GameObject.Find(EditorVariables.GAME_MANAGER.ToString()).GetComponent<GameManager>().LoadNewScene();
         }
         
         SceneManager.LoadScene(sceneName);

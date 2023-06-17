@@ -12,10 +12,8 @@ public class DynamicLayer : MonoBehaviour
 
     void Start()
     {
-        EditorValues editor = new();
-
         spriteRender = GetComponent<SpriteRenderer>();
-        playerObject = GameObject.Find(editor.PLAYER_OBJECT);
+        playerObject = GameObject.Find(EditorVariables.PLAYER_OBJECT.ToString());
     }
 
     void Update()

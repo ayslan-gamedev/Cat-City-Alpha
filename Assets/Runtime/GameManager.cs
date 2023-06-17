@@ -25,9 +25,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void InitializeInventory()
     {
-        EditorValues editor = new();
-
-        playerInventory = GameObject.Find(editor.PLAYER_OBJECT).GetComponent<Inventory>();
+        playerInventory = GameObject.Find(EditorVariables.PLAYER_OBJECT.ToString()).GetComponent<Inventory>();
         playerInventory.SetInventory(lastInventorySaved);
     }
 

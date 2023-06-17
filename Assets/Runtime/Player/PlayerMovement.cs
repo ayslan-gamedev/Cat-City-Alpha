@@ -39,7 +39,7 @@
             speed = Speed;
             currentCamera = camera;
 
-            currentMovementMode = lastMovement();
+            currentMovementMode = LastMovement();
             ClearMovementData();
         }
 
@@ -92,7 +92,7 @@
             point.transform.localPosition = playerObject.transform.position;
         }
     
-        private MovementMode lastMovement()
+        private MovementMode LastMovement()
         {
             return MovementMode.PointClick;
         }
@@ -101,20 +101,21 @@
         #region NavMesh
         private void MoveAgent(NavMeshAgent navMeshAgent, Transform DestinyPoint, Camera camera)
         {
-            if(Input.GetMouseButton(0) || Input.touchCount > 0)
+            if(Input.touchCount > 0)
             {
                 Vector3 inputPosition;
 
                 if(Input.touchCount > 0)
                 {
                     Touch touch = Input.GetTouch(0);
-                    inputPosition = new Vector3(touch.position.x, touch.position.y, 10);
+                    inputPosition = new Vector3(touch.position.x, touch.position.y, 0);
+                 
                 }
                 else
                 {
                     inputPosition = Input.mousePosition;
                 }
-
+                
                 Vector3 worldPoint = camera.ScreenToWorldPoint(inputPosition);
                 Vector3 forwardPoint = worldPoint + (camera.transform.forward * 10.0f);
 
@@ -122,6 +123,7 @@
             }
 
             navMeshAgent.SetDestination(DestinyPoint.transform.position);
+            Debug.Log("ok");
         }
         #endregion
 

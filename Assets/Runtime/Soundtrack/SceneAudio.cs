@@ -12,14 +12,13 @@ public class SceneAudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EditorValues editor = new();
 
-        if(!GameObject.Find(editor.GAME_MANAGER))
+        if(!GameObject.Find(EditorVariables.GAME_MANAGER.ToString()))
         {
             return;
         }
         
-        manager = GameObject.Find(editor.GAME_MANAGER).GetComponent<GameManager>();
+        manager = GameObject.Find(EditorVariables.GAME_MANAGER.ToString()).GetComponent<GameManager>();
 
     }
 
