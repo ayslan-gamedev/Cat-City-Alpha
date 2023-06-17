@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using CatCity;
-using System.Security.Cryptography;
 
 public class GameManager : MonoBehaviour
 {
     #region Global Consts
-    public const string PLAYER_OBJECT = "Player";
     #endregion
 
     // Called before the scene starts 
@@ -27,7 +25,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void InitializeInventory()
     {
-        playerInventory = GameObject.Find(PLAYER_OBJECT).GetComponent<Inventory>();
+        EditorValues editor = new();
+
+        playerInventory = GameObject.Find(editor.PLAYER_OBJECT).GetComponent<Inventory>();
         playerInventory.SetInventory(lastInventorySaved);
     }
 

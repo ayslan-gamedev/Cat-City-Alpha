@@ -553,58 +553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51837fdba1ab23e4b827f5121e437446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &275033144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 275033146}
-  - component: {fileID: 275033145}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &275033145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275033144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 176be1cac04924440a0866fa8f3d0037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInventory: {fileID: 829479597}
-  lastInventorySaved: {fileID: 11400000, guid: e3dac84170cf8d447be21b4be3af68b2, type: 2}
-  objectSave: {fileID: 11400000, guid: df65d175a9ab7964db83c39f3f3eb0cf, type: 2}
-  currentVariables: {fileID: 11400000, guid: e0e9ea92e766a61458428e286a09e230, type: 2}
-  languageList: {fileID: 0}
-  currentLanguage:
-    name: pt-br
-    index: 2
---- !u!4 &275033146
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275033144}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4864178, y: -2.1048605, z: -18.305744}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &447157708
 GameObject:
   m_ObjectHideFlags: 0

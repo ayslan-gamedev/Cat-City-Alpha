@@ -1,13 +1,13 @@
 ﻿using System.Threading.Tasks;
 using UnityEngine;
 using CatCity.DialogueElements;
+using CatCity;
 
 namespace CatCity.Dialogue
 {
     #region Reader
     public class DialogueReader
     {
-        public const string GAME_MANAGER = "GameManager";
         private Language currentLanguage;
 
         /// <summary>
@@ -15,11 +15,12 @@ namespace CatCity.Dialogue
         /// </summary>s
         public void GetLanguage()
         {
+            EditorValues globalVariables = new();
             GameManager languageSettings;
 
-            if(GameObject.Find(GAME_MANAGER))
+            if(GameObject.Find(globalVariables.GAME_MANAGER))
             {
-                languageSettings = GameObject.Find(GAME_MANAGER).GetComponent<GameManager>();
+                languageSettings = GameObject.Find(globalVariables.GAME_MANAGER).GetComponent<GameManager>();
                 currentLanguage = languageSettings.currentLanguage;
             }
             else

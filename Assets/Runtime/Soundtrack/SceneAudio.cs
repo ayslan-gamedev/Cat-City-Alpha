@@ -1,3 +1,4 @@
+using CatCity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,14 @@ public class SceneAudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(!GameObject.Find("GameManager"))
+        EditorValues editor = new();
+
+        if(!GameObject.Find(editor.GAME_MANAGER))
         {
             return;
         }
         
-        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        manager = GameObject.Find(editor.GAME_MANAGER).GetComponent<GameManager>();
 
     }
 

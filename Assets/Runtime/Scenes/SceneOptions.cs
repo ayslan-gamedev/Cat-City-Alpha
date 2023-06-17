@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using CatCity;
 
 [AddComponentMenu("Cat City/Scene Manager")]
 public class SceneOptions : MonoBehaviour
 {
-    private const string GAME_MANAGER = "GameManager";
-
     public void LoadSceneButton(string sceneName)
     {
-        if(GameObject.Find(GAME_MANAGER) != null)
+        EditorValues globalVariables = new();
+
+        if(GameObject.Find(globalVariables.GAME_MANAGER) != null)
         {
-            GameObject.Find(GAME_MANAGER).GetComponent<GameManager>().LoadNewScene();
+            GameObject.Find(globalVariables.GAME_MANAGER).GetComponent<GameManager>().LoadNewScene();
         }
         
         SceneManager.LoadScene(sceneName);

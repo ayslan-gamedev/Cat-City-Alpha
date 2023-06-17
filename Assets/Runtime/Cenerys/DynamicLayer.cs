@@ -10,13 +10,12 @@ public class DynamicLayer : MonoBehaviour
     private SpriteRenderer spriteRender;
     private GameObject playerObject;
 
-    public const string PLAYER_OBJECT = "Player";
-
     void Start()
     {
+        EditorValues editor = new();
 
         spriteRender = GetComponent<SpriteRenderer>();
-        playerObject = GameObject.Find(PLAYER_OBJECT);
+        playerObject = GameObject.Find(editor.PLAYER_OBJECT);
     }
 
     void Update()
