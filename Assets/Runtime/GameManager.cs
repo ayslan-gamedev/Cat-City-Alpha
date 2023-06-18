@@ -1,10 +1,23 @@
 ﻿using UnityEngine;
 using CatCity;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    #region Global Consts
-    #endregion
+    /// <summary>
+    /// current scene
+    /// </summary>
+    public string CurrentScene { private set; get; }
+    
+    /// <summary>
+    /// Load a scene with the load scene 
+    /// </summary>
+    /// <param name="scene">scene to load</param>
+    public void LoadNewScene(string scene)
+    {
+        SceneManager.LoadScene(EditorVariables.LoadScene.ToString());
+        CurrentScene = scene;
+    }
 
     // Called before the scene starts 
     private void Awake()
@@ -36,8 +49,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNewScene()
     {
-        //saveManager.SaveObject = objectSave;
-        //saveManager.Save(transform, playerInventory.CurrentPlayerInventory);
+        saveManager.SaveObject = objectSave;
+        saveManager.Save(transform, playerInventory.CurrentPlayerInventory);
     }
 
     public GlobalVariables currentVariables;
