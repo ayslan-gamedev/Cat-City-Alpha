@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using CatCity.Player;
+using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]

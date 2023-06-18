@@ -2,7 +2,7 @@
 using CatCity;
 
 [AddComponentMenu("Cat City/Dynamics/Layers")]
-public class DynamicLayer : MonoBehaviour 
+public class DynamicLayer : MonoBehaviour
 {
     public float minPosY;
     public int[] layerOrder;
@@ -13,18 +13,24 @@ public class DynamicLayer : MonoBehaviour
     void Start()
     {
         spriteRender = GetComponent<SpriteRenderer>();
-        playerObject = GameObject.Find(EditorVariables.PLAYER_OBJECT.ToString());
     }
 
     void Update()
     {
-        if(playerObject.transform.position.y < minPosY)
+        if(playerObject != null)
         {
-            spriteRender.sortingOrder = layerOrder[0];
+            if(playerObject.transform.position.y < minPosY)
+            {
+                spriteRender.sortingOrder = layerOrder[0];
+            }
+            else
+            {
+                spriteRender.sortingOrder = layerOrder[1];
+            }
         }
         else
         {
-            spriteRender.sortingOrder = layerOrder[1];
+            playerObject = GameObject.Find(EditorVariables.PLAYER_OBJECT.ToString());
         }
     }
 }

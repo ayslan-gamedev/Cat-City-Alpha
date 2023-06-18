@@ -98,18 +98,17 @@
         }
         #endregion
 
-        #region NavMesh
+        #region NavMeshS
         private void MoveAgent(NavMeshAgent navMeshAgent, Transform DestinyPoint, Camera camera)
         {
-            if(Input.touchCount > 0)
+            if(Input.GetMouseButton(0) || Input.touchCount > 0)
             {
                 Vector3 inputPosition;
 
                 if(Input.touchCount > 0)
                 {
                     Touch touch = Input.GetTouch(0);
-                    inputPosition = new Vector3(touch.position.x, touch.position.y, 0);
-                 
+                    inputPosition = new Vector3(touch.position.x, touch.position.y, 0);         
                 }
                 else
                 {
@@ -123,7 +122,6 @@
             }
 
             navMeshAgent.SetDestination(DestinyPoint.transform.position);
-            Debug.Log("ok");
         }
         #endregion
 
