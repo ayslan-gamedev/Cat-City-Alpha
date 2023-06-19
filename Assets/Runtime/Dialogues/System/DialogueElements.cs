@@ -18,7 +18,7 @@ namespace CatCity.DialogueElements
     public class DialogueLine
     {
         public string speaker;
-        public string text;
+        [TextArea(3, 10)][SerializeField] public string text;
         public Sprite protait;
         public List<string> @event;
     }
@@ -26,7 +26,7 @@ namespace CatCity.DialogueElements
     [System.Serializable]
     public class Choice
     {
-        public string text;
+        [TextArea(3, 10)][SerializeField] public string text;
         public int nextDialogueID;
     }
 
