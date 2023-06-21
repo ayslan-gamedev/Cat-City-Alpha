@@ -23,5 +23,10 @@ namespace CatCity
             CurrentLanguage = LanguageList.languages.ToArray()[LanguageIndex];
         }
         #endregion
+
+        public void Test()
+        {
+            Debug.Log("AAAAAAAAAAAAAAAAAAA");
+        }
     }
 }
