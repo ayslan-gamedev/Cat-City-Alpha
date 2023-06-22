@@ -11,7 +11,8 @@ public class InventoryManager : MonoBehaviour
     /// <summary>
     /// Current player inventory file 
     /// </summary>
-    public Inventory PlayerInventory { get; private set; }
+    public Inventory PlayerInventory; 
+    //{ get; private set; }
 
     /// <summary>
     /// Set a inventory player
@@ -43,7 +44,7 @@ public class InventoryManager : MonoBehaviour
         {
             if(itemObject.name == item.name)
             {
-                item.quant += item.quant;
+                itemObject.quant += item.quant;
                 itemFound = 1;
                 break;
             }
@@ -51,7 +52,14 @@ public class InventoryManager : MonoBehaviour
 
         if(itemFound != 1)
         {
-            PlayerInventory.items.Add(item);
+            Item itemToAdd = new()
+            {
+                name = item.name,
+                quant = item.quant,
+                sprite = item.sprite
+            };
+
+            PlayerInventory.items.Add(itemToAdd);
         }
     }
 
@@ -91,6 +99,7 @@ public class InventoryManager : MonoBehaviour
     }
     #endregion
 
+    #region Remove Item
     /// <summary>
     /// Remove a item of player inventory
     /// </summary>
@@ -136,4 +145,98 @@ public class InventoryManager : MonoBehaviour
 
         RemoveItem(item);
     }
+    #endregion
+
+    #region Verify Item
+    /// <summary>
+    /// Verify if a item exists in player inventory
+    /// </summary>
+    /// <param name="item">Item to compare</param>
+    /// <returns>true if the item exists</returns>
+    public bool VerifyItem(Item item)
+    {
+        foreach(Item itemObject in PlayerInventory.items)
+        {
+            if(item.name == itemObject.name)
+            {
+                if(item.quant <= itemObject.quant)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Verify if a item exists in player inventory
+    /// </summary>
+    /// <param name="_name">name of object</param>
+    /// <returns>true if the item exists</returns>
+    public bool VerifyItem(string _name)
+    {
+        Item item = new()
+        {
+            name = _name
+        };
+
+        foreach(Item itemObject in PlayerInventory.items)
+        {
+            if(item.name == itemObject.name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Verify if a item exists in player inventory
+    /// </summary>
+    /// <param name="_name">name of object</param>
+    /// <param name="_quant">quant of objects to compare</param>
+    /// <returns>true if the item exists</returns>
+    public bool VerifyItem(string _name, double _quant)
+    {
+        Item item = new()
+        {
+            name = _name,
+            quant = _quant
+        };
+
+        foreach(Item itemObject in PlayerInventory.items)
+        {
+            if(item.name == itemObject.name)
+            {
+                if(item.quant <= itemObject.quant)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+    #endregion
+
+    //////////////////////////////////////////////
+
+    public void AddItem()
+    {
+        AddItem(itemToCompare);
+    }
+    public void RemoveItem()
+    {
+        RemoveItem(itemToCompare);
+    }
+
+    public Item itemToCompare;
+
 }
