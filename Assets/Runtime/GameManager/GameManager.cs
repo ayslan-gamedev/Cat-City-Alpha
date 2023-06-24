@@ -7,7 +7,7 @@ namespace CatCity
     public enum EditorVariables
     {
         GAME_MANAGER,
-        PLAYER_OBJECT,
+        Player,
         LoadScene
     }
 

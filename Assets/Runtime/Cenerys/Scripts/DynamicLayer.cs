@@ -1,23 +1,20 @@
 ﻿using UnityEngine;
 using CatCity;
 
-[AddComponentMenu("Cat City/Dynamics/Layers")]
+[RequireComponent(typeof(SpriteRenderer))]
+[ExecuteInEditMode]
+[AddComponentMenu("Cat City/Dynamics/Dynamic Layer")]
 public class DynamicLayer : MonoBehaviour
 {
     public float minPosY;
     public int[] layerOrder;
 
-    private SpriteRenderer spriteRender;
-    private GameObject playerObject;
+    [SerializeField] private SpriteRenderer spriteRender;
+    [SerializeField] private GameObject playerObject;
 
-    void Start()
+    void LateUpdate()
     {
-        spriteRender = GetComponent<SpriteRenderer>();
-    }
-
-    void Update()
-    {
-        if(playerObject != null)
+        if(playerObject != null && spriteRender != null)
         {
             if(playerObject.transform.position.y < minPosY)
             {
@@ -30,7 +27,8 @@ public class DynamicLayer : MonoBehaviour
         }
         else
         {
-            playerObject = GameObject.Find(EditorVariables.PLAYER_OBJECT.ToString());
+            playerObject = GameObject.Find(EditorVariables.Player.ToString());
+            spriteRender = GetComponent<SpriteRenderer>();
         }
     }
 }
