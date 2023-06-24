@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using CatCity.DialogueElements;
 using CatCity.Dialogue;
 using TMPro;
+using System;
 
 [AddComponentMenu("Cat City/Dialogue/Controller")]
 public class DialogueController : MonoBehaviour
@@ -37,6 +38,8 @@ public class DialogueController : MonoBehaviour
         StartUI(); // initialize UI
 
         WriteDialogue(true); // start the dialogue
+
+        StartDialogueEvent();
     }
 
     /// <summary>
@@ -274,6 +277,11 @@ public class DialogueController : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void StartDialogueEvent()
+    {
+        sceneEvents.CallEvent("StartDialogue"); // calls the event
     }
     #endregion    
 }

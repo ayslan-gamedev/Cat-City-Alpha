@@ -17,7 +17,8 @@ MonoBehaviour:
     - speaker: 
       text: "T\xE3o r\xE1pido quando a velocidade dos ventiladores?"
       protait: {fileID: 0}
-      event: []
+      event:
+      - 
     - speaker: 
       text: "Isso mesmo. Eu serei a maga, a estrela principal, a protagonista desta
         hist\xF3ria"

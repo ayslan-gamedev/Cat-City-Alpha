@@ -17,20 +17,23 @@ MonoBehaviour:
     - speaker: Loranje
       text: "O que est\xE1 acontecendo?"
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     - speaker: Throy
       text: "Eu n\xE3o sei Loranje... oque eu quero da vida...."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
-      event: []
+      event:
+      - cameraThory
     - speaker: Loranje
       text: Como assim Throy?
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     - speaker: Throy
       text: "Eu sempre vi todos tendo sonhos incr\xEDveis, objetivos para si."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event:
-      - 
+      - cameraThory
     - speaker: Throy
       text: "Seja viajar para o espa\xE7o..."
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
@@ -58,25 +61,27 @@ MonoBehaviour:
       text: "Eu s\xF3 queria... ser um furry normal...."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - throy senta
+      - take005
     - speaker: Throy
       text: "Com sonhos e esperan\xE7as...."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
-      event: []
+      event:
+      - 
     - speaker: Throy
       text: Mas nem sei oque eu gosto.
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - thory chora
+      - take004
     - speaker: Loranje
       text: Throy...
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
       event:
-      - lorane levanta
+      - take006
     - speaker: Loranje
       text: "Primeiro, voc\xEA n\xE3o prescisa ser como ningu\xE9m"
       protait: {fileID: 21300000, guid: 27afe3ec9ece2264c80af7905ef7e03d, type: 3}
-      event: []
+      event:
+      - take006
     - speaker: Throy
       text: Mas como eu vou saber o que fazer?
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
@@ -109,7 +114,7 @@ MonoBehaviour:
     - text: "Ainda n\xE3o sei..."
       nextDialogueID: 1
     event:
-    - proxima cena
+    - next scene
   - linesList:
     - speaker: Loranje
       text: Tente Throy... apenas tente...
@@ -117,7 +122,7 @@ MonoBehaviour:
       event: []
     choicesList: []
     event:
-    - proxima cena
+    - next scene
   - linesList:
     - speaker: Loranje
       text: Tente Throy... apenas tente...
@@ -125,4 +130,4 @@ MonoBehaviour:
       event: []
     choicesList: []
     event:
-    - proxima cena
+    - next scene
