@@ -1,9 +1,5 @@
-using CatCity;
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
+using CatCity.Inventory;
 using System.Linq;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -44,7 +40,7 @@ public class InventoryManager : MonoBehaviour
         {
             if(itemObject.name == item.name)
             {
-                itemObject.quant += item.quant;
+                itemObject.amount += item.amount;
                 itemFound = 1;
                 break;
             }
@@ -55,7 +51,7 @@ public class InventoryManager : MonoBehaviour
             Item itemToAdd = new()
             {
                 name = item.name,
-                quant = item.quant,
+                amount = item.amount,
                 sprite = item.sprite
             };
 
@@ -74,7 +70,7 @@ public class InventoryManager : MonoBehaviour
         {
             name = _name,
             sprite = _sprite,
-            quant = 1
+            amount = 1
         };
 
         AddItem(item);
@@ -92,7 +88,7 @@ public class InventoryManager : MonoBehaviour
         {
             name = _name,
             sprite = _sprite,
-            quant = _quant
+            amount = _quant
         };
 
         AddItem(item);
@@ -108,8 +104,8 @@ public class InventoryManager : MonoBehaviour
         var theItem = PlayerInventory.items.FirstOrDefault(x => x.name == item.name);
         if(theItem != null)
         {
-            theItem.quant -= item.quant;
-            if(theItem.quant <= 0)
+            theItem.amount -= item.amount;
+            if(theItem.amount <= 0)
             {
                 PlayerInventory.items.Remove(theItem);
             }
@@ -140,7 +136,7 @@ public class InventoryManager : MonoBehaviour
         Item item = new()
         {
             name = _name,
-            quant = _quant
+            amount = _quant
         };
 
         RemoveItem(item);
@@ -159,7 +155,7 @@ public class InventoryManager : MonoBehaviour
         {
             if(item.name == itemObject.name)
             {
-                if(item.quant <= itemObject.quant)
+                if(item.amount <= itemObject.amount)
                 {
                     return true;
                 }
@@ -205,14 +201,14 @@ public class InventoryManager : MonoBehaviour
         Item item = new()
         {
             name = _name,
-            quant = _quant
+            amount = _quant
         };
 
         foreach(Item itemObject in PlayerInventory.items)
         {
             if(item.name == itemObject.name)
             {
-                if(item.quant <= itemObject.quant)
+                if(item.amount <= itemObject.amount)
                 {
                     return true;
                 }
@@ -226,7 +222,7 @@ public class InventoryManager : MonoBehaviour
     }
     #endregion
 
-    //////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////
 
     public void AddItem()
     {
