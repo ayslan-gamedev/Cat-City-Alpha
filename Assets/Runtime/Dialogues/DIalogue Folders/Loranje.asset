@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Loranje
   m_EditorClassIdentifier: 
   gameDialoguesList:
-  - {fileID: 11400000, guid: f4827f5dfc63b894f91f6d388b3a4a4b, type: 2}
   - {fileID: 11400000, guid: b5e386544a0c6ac4cbbb1dfcf1ca4d7f, type: 2}
+  - {fileID: 11400000, guid: f4827f5dfc63b894f91f6d388b3a4a4b, type: 2}
   - {fileID: 11400000, guid: 666b4274456eb7343a182c738523b3cc, type: 2}

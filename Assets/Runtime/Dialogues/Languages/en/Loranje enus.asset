@@ -17,89 +17,101 @@ MonoBehaviour:
     - speaker: Loranje
       text: Wha tis happening?
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     - speaker: Throy
       text: "I don\xB4t know what I want for my life, Loranje."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
-      event: []
+      event:
+      - cameraThory
     - speaker: Loranje
       text: What do you mean, Throy?
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     - speaker: Throy
       text: "I\xB4ve always seen people having increadible dreams and objectives
         for themselves."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event:
-      - 
+      - cameraThory
     - speaker: Throy
       text: It could be travel to the space,
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
-      - imgainacao blink
+      - imgainacaoBlink
     - speaker: Throy
       text: becoming a TV show hoster,
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - imagincao 2
+      - imgainacaoStarly
     - speaker: Throy
       text: to understand the world inside the smallest cell.
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - imaginacao loranje
+      - imgainacaoLoranje
     - speaker: Throy
       text: "Why I don\xB4t have this?"
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
-      event: []
+      event:
+      - imgainacaoFim
     - speaker: Throy
       text: Who Am I?
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
-      event: []
+      event:
+      - thorySentaECamera
     - speaker: Throy
       text: "I just want...to be like a normal furry\u2026"
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - throy senta
+      - thoryTriste
     - speaker: Throy
       text: With dreams and hopes.
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
-      event: []
+      event:
+      - thoryChora
     - speaker: Throy
       text: "But I don\xB4t even know what I like."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - thory chora
+      - thorySentaECamera
     - speaker: Loranje
       text: Throy,
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
       event:
-      - lorane levanta
+      - cameraLoranje
     - speaker: Loranje
       text: "first, you don\xB4t need to be like everyone else."
       protait: {fileID: 21300000, guid: 27afe3ec9ece2264c80af7905ef7e03d, type: 3}
-      event: []
+      event:
+      - cameraLoranje
+      - loranjeAponta
     - speaker: Throy
       text: But how will I know what to do?
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - throy senta
+      - thorySentaECamera
     - speaker: Loranje
       text: "Since you want to find this out, I\xB4ll give you an idea:"
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     - speaker: Loranje
       text: "If you can\xB4t help yourself by not having a dream, you can help others
         to fulfill their dreams by trying to find out which is your dream"
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     - speaker: Thory
       text: "I don\xB4t know. But I think it\xB4s a nice idea."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     - speaker: Loranje
       text: I hope this answer may have helped you.
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
-      event: []
+      event:
+      - cameraLoranje
     choicesList:
     - text: Thank you
       nextDialogueID: 109
@@ -110,7 +122,7 @@ MonoBehaviour:
     - text: "I still don\xB4t know"
       nextDialogueID: 1
     event:
-    - proxima cena
+    - nextScene
   - linesList:
     - speaker: Loranje
       text: Try, Throy. Just Try....
@@ -118,7 +130,7 @@ MonoBehaviour:
       event: []
     choicesList: []
     event:
-    - proxima cena
+    - nextScene
   - linesList:
     - speaker: Loranje
       text: Tente Throy... apenas tente...
@@ -126,4 +138,4 @@ MonoBehaviour:
       event: []
     choicesList: []
     event:
-    - proxima cena
+    - nextScene
