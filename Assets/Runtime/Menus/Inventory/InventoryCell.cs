@@ -1,7 +1,6 @@
-using System.Data;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace CatCity.Inventory
 {
