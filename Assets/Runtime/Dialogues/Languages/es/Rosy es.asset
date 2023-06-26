@@ -31,7 +31,8 @@ MonoBehaviour:
     - speaker: Throy
       text: ...
       protait: {fileID: 21300000, guid: aa3007b08c7ab00469917678754448ed, type: 3}
-      event: []
+      event:
+      - cameraThory
     - speaker: Throy
       text: Bueno, volviendo... no te olvides que todo esto es igual a 10 + 15.
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
@@ -39,7 +40,8 @@ MonoBehaviour:
     - speaker: Rosy (pensando)
       text: "Wow, \xBFse ha vuelto tonto o realmente no le gusto?"
       protait: {fileID: 21300000, guid: 791f519e10498434a9d1167040d49af2, type: 3}
-      event: []
+      event:
+      - cameraRosyEstudando
     - speaker: Rosy
       text: "Throy, \xBFpodemos detenernos un rato? \xA1Estoy cansada de estudiar
         tanto!"
@@ -48,16 +50,18 @@ MonoBehaviour:
     - speaker: Throy
       text: "Creo que est\xE1 bien, no tendr\xE1s ning\xFAn problema con eso, \xBFverdad?"
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
-      event: []
+      event:
+      - cameraThory
     - speaker: Rosy
       text: "Creo que no. Yo quer\xEDa hablar contigo."
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
-      event: []
+      event:
+      - cameraRosy
     - speaker: Throy
       text: "\xBFQu\xE9 es?"
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
       event:
-      - 
+      - cameraThory
     - speaker: Rosy
       text: "\xBFTe... gusta alguien?"
       protait: {fileID: 21300000, guid: 631308520cb14b64c8dc69ecbab67dbe, type: 3}
@@ -72,23 +76,24 @@ MonoBehaviour:
       text: "\xA1Eh\u2026 s\xED! Pero... no s\xE9..."
       protait: {fileID: 21300000, guid: aa3007b08c7ab00469917678754448ed, type: 3}
       event:
-      - 
+      - cameraThory
+      - RosySenta
     - speaker: Rosy
       text: "Est\xE1 bien. Solo quer\xEDa, no s\xE9..."
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - RosyLevanta_take3
+      - cameraRosy1
     - speaker: Throy
       text: "\xBFQu\xE9?"
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - camera no throy
+      - cameraThory
     - speaker: Rosy
       text: "Me preguntaba si... si no hay nadie con quien ir al baile, quiz\xE1s
         podr\xEDamos..."
       protait: {fileID: 21300000, guid: 460b890de0fe2314dac0ff7636882e2b, type: 3}
       event:
-      - RosySenta
+      - cameraRosy1
     - speaker: Throy
       text: "\xA1Me encantar\xEDa!"
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
@@ -98,21 +103,22 @@ MonoBehaviour:
       text: "\xBFLo juras que no te molestar\xE1?"
       protait: {fileID: 21300000, guid: 631308520cb14b64c8dc69ecbab67dbe, type: 3}
       event:
-      - cameraRosyTake3
+      - cameraRosy1
     - speaker: Throy
       text: "Por supuesto que no, estoy muy contento con esta invitaci\xF3n."
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
-      event: []
+      event:
+      - cameraThroy
     - speaker: Rosy
       text: Gracias, Throy...
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - rosy senta
+      - cameraRosy1
     - speaker: Throy
       text: Te lo agradezco...
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
       event:
-      - camera no throy
+      - cameraThory
     - speaker: Throy
       text: "\xBFQuieres volver a estudiar o yo deber\xEDa ir?"
       protait: {fileID: 21300000, guid: 6a6d0b6888e93614190a84692dba1b80, type: 3}
@@ -121,12 +127,12 @@ MonoBehaviour:
       text: Quiero continuar, creo que he me animado ahora.
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
       event:
-      - rosy senta
+      - cameraRosy1
     - speaker: Throy and Rosy
       text: Hahahahahahahahahaha
       protait: {fileID: 0}
       event:
-      - cena final
+      - cenaFinal
     choicesList: []
     event:
     - nextScene

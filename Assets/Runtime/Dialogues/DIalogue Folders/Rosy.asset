@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rosy
   m_EditorClassIdentifier: 
   gameDialoguesList:
-  - {fileID: 11400000, guid: 057aeba34f9c66846b19c3bcb00b3a44, type: 2}
   - {fileID: 11400000, guid: 1428fd185968e354ab93890655a3dcb2, type: 2}
+  - {fileID: 11400000, guid: 057aeba34f9c66846b19c3bcb00b3a44, type: 2}
   - {fileID: 11400000, guid: 11ab9342c675a3f428be35aee194f48a, type: 2}
