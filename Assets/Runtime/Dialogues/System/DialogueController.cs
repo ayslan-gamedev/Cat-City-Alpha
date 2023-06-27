@@ -281,7 +281,10 @@ public class DialogueController : MonoBehaviour
 
     private void StartDialogueEvent()
     {
-        sceneEvents.CallEvent("StartDialogue"); // calls the event
+        if(sceneEvents != null)
+        {
+            sceneEvents.CallEvent("StartDialogue"); // calls the event
+        }
     }
     #endregion    
 }
