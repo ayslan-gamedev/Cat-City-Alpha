@@ -134,4 +134,4 @@ MonoBehaviour:
       - cenaFinal
     choicesList: []
     event:
-    - next scene
+    - nextScene
