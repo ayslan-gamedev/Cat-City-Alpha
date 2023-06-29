@@ -193,7 +193,7 @@ MonoBehaviour:
       event: []
     - speaker: Press
       text: "E por que eu quem programei ent\xE3o eu tenho esse poder :3 \nMas relaxa,
-        o restante do time tamb\xE9m vai aparecer em algum momento..."
+        o restante do time tamb\xE9m vai aparecer."
       protait: {fileID: 0}
       event: []
     choicesList:
