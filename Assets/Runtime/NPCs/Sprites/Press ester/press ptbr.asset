@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431e897b462fd8141bbf5886285460c7, type: 3}
+  m_Name: press ptbr
+  m_EditorClassIdentifier: 
+  gameDialogues:
+  - linesList:
+    - speaker: Press
+      text: "oh! voc\xEA me encontrou!"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Prazer, meu nome \xE9 Press, fui eu quem criei... bem... digamos que
+        eu fa\xE7o as coisas funcionarem como devem por aqui ^^ "
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Deu um trabalho da desgra\xE7a fazer esse jogo, foi provavelmente um
+        dos projetos mais longos em que ja estive... "
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Ent\xE3o resolvi fazer esse easter eggy ^^ e ai de quem reclamar porque
+        eu n\xE3o vou tirar ^ w^"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Mas bom, j\xE1 que estamos aqui... por qu\xEA n\xE3o me faz uma pergunta?
+        :3 eu deixei algumas pre-escritas com esse meu sisteminha de dialogo "
+      protait: {fileID: 0}
+      event: []
+    choicesList:
+    - text: "Voc\xEA quem fez esse jogo? "
+      nextDialogueID: 2
+    - text: Explique o seu fursona
+      nextDialogueID: 3
+    - text: Fale sobre a Instal
+      nextDialogueID: 4
+    - text: "Voc\xEA \xE9 um furry?"
+      nextDialogueID: 5
+    - text: "Porque voc\xEA se colocou no jogo?"
+      nextDialogueID: 6
+    - text: Sair
+      nextDialogueID: 7
+    event: []
+  - linesList:
+    - speaker: Press
+      text: Mais alguma pergunta?
+      protait: {fileID: 0}
+      event: []
+    choicesList:
+    - text: "Voc\xEA quem fez esse jogo? "
+      nextDialogueID: 2
+    - text: Explique o seu fursona
+      nextDialogueID: 3
+    - text: Fale sobre a Instal
+      nextDialogueID: 4
+    - text: "Voc\xEA \xE9 um furry?"
+      nextDialogueID: 5
+    - text: "Porque voc\xEA se colocou no jogo?"
+      nextDialogueID: 6
+    - text: Sair
+      nextDialogueID: 7
+    event: []
+  - linesList:
+    - speaker: Press
+      text: "Sozinho n\xE3o, n\xE3o conseguiria fazer sozinho, mas tive um trabalho
+        do ka**** nos ultimos meses. "
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Quem desenvolveu maior parte da lore foi meu chefe, Opuinguim, as artes
+        foram dirigidas pelo Peixe, um rato de academia e artista, a trilha sonora
+        foi feita por um Poney, por isso \xE9 meio magiquinha"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Al\xE9m disso tiveram varias outras pessoas envolvidas no game, so a
+        equipe de arte s\xE3o um monte ent\xE3o n\xE3o da para citar tudo aqui"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Mas minha colega de trabalho Marina, ela ficou na parte de Design na
+        metade do projeto... j\xE1 disse para ela que a arte n\xE3o compensa mas
+        ela nunca aprende - <- "
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Mas enfim, quanto a mim, eu quem elaborei grande parte da engenharia
+        de software do jogo, fui responsavel pela cria\xE7\xE3o dos sistemas mais
+        complicadinhos como esse sistema de dalogo (que n\xE3o ficou como queria)"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Al\xE9m disso eu estabeleci os padr\xF5es de versionanmento de software
+        e organiza\xE7\xE3o de codigo fonte do proejto, se por acaso voce estiver
+        jogando num notebook da xuxa agrade\xE7a a mim"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: Maior parte do meu trabalho envolve sentar e ficar a noite inteira elaborando,
+        planejando, escrevendo, corrigindo e otimizando codigos.
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Em resumo eu sou o tipico programador nerd ^^ s\xF3 que eu tambem sou
+        furry, prazer :3 "
+      protait: {fileID: 0}
+      event: []
+    choicesList:
+    - text: Fazer outra pergunta
+      nextDialogueID: 1
+    event: []
+  - linesList:
+    - speaker: Press
+      text: "O meu sona \xE9 um lobo azul antropormofico, s\xF3 que ele tem tem rabo
+        peludo que nem o de uma raposa ^^"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "tenho olhos verdes, mas que mudam de cor conforme meu poder, faz parte
+        da lore viajadassa dele, voce n\xE3o iria entender..."
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "eu uso um casaco preto, por que sou programador e emo >:3 \nmeu cabelo
+        ainda n\xE3o sei como fa\xE7o"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: Alem disso tenho algumas partes do meu corpo azul neon, como meu cabelo,
+        minhas patas, minha barriga...
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Tamb\xE9m tenho uma outra parte do corpo neon mas se eu falar a Instal
+        me processaria . . . . . ^^\""
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Tamb\xE9m tenho uma outra parte do corpo neon mas se eu falar a Instal
+        me processaria . . . . . ^^\""
+      protait: {fileID: 0}
+      event: []
+    choicesList:
+    - text: Fazer outra pergunta
+      nextDialogueID: 1
+    event: []
+  - linesList:
+    - speaker: Press
+      text: "A instal \xE9 um grupo de desenvolvedores indepente de jogos a qual
+        eu fa\xE7o parte :3 "
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Quem pode falar melhor sobre a instal \xE9 meu chefe, se voc\xEA v\xEA-lo
+        fa\xE7a essa pergunta, a historia da instal \xE9 dahorinha, pelo menos para
+        mim que sou f\xE3 de hist\xF3ria"
+      protait: {fileID: 0}
+      event: []
+    choicesList:
+    - text: Fazer outra pergunta
+      nextDialogueID: 1
+    event: []
+  - linesList:
+    - speaker: Press
+      text: "N\xE3o, sou um elicptero de combate...\npor que? pare\xE7o um furry?????\n*lan\xE7o
+        um missel em voc\xEA*"
+      protait: {fileID: 0}
+      event: []
+    choicesList:
+    - text: Fazer outra pergunta
+      nextDialogueID: 1
+    event: []
+  - linesList:
+    - speaker: Press
+      text: "essa \xE9 uma pergunta muito dificil de responder ent\xE3o me deixa
+        eu pensar um pouquinho \n. . . . . . . . . .  *pensando*"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: 'Porque eu quis :) '
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "E por que eu quem programei ent\xE3o eu tenho esse poder :3 \nMas relaxa,
+        o restante do time tamb\xE9m vai aparecer em algum momento..."
+      protait: {fileID: 0}
+      event: []
+    choicesList:
+    - text: Fazer outra pergunta
+      nextDialogueID: 1
+    event: []
+  - linesList:
+    - speaker: Press
+      text: 'Irei voltar a programar agora.
+
+        bom jogo :3'
+      protait: {fileID: 0}
+      event: []
+    choicesList: []
+    event:
+    - EndDialogue
