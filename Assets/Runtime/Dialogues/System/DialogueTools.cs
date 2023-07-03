@@ -15,14 +15,11 @@ namespace CatCity.Dialogue
         /// </summary>s
         public void GetLanguage()
         {
-            GameManager languageSettings;
-
-            if(GameObject.Find(EditorVariables.GAME_MANAGER.ToString()))
+            try
             {
-                languageSettings = GameObject.Find(EditorVariables.GAME_MANAGER.ToString()).GetComponent<GameManager>();
-                currentLanguage = languageSettings.CurrentLanguage;
+                currentLanguage = Object.FindObjectOfType<GameManager>().GetComponent<GameManager>().CurrentLanguage;
             }
-            else
+            catch
             {
                 currentLanguage = new Language
                 {

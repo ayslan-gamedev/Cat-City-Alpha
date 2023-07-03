@@ -3,24 +3,30 @@ using UnityEngine.SceneManagement;
 
 namespace CatCity
 {
-    [System.Serializable]
-    public enum EditorVariables
-    {
-        GAME_MANAGER,
-        Player,
-        LoadScene
-    }
-
     public class GameManager : MonoBehaviour
     {
         #region Language
         public Languages LanguageList;
 
-        public Language CurrentLanguage { private set; get; }
+        public Language CurrentLanguage;
 
-        public void SeletLanguage(int LanguageIndex)
+        private void Start()
         {
-            CurrentLanguage = LanguageList.languages.ToArray()[LanguageIndex];
+            DontDestroyOnLoad(gameObject);
+            Debug.Log("a");
+        }
+
+        public void SetGameLanguage(int LanguageIndex)
+        {
+            if(LanguageList != null)
+            {
+                CurrentLanguage = LanguageList.languages.ToArray()[LanguageIndex];
+            }
+            else
+            {
+                Debug.LogWarning("lanaguage List not seted!!");
+            }
+
         }
         #endregion
 
