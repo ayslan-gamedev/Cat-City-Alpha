@@ -511,6 +511,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadSceneControllerPreFab: {fileID: 1089224980921127720, guid: 9ea972ef8712c32419c15c7abef8ffca, type: 3}
+  GameManagerPreFab: {fileID: 0}
+  onStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &563440555
 GameObject:
   m_ObjectHideFlags: 0

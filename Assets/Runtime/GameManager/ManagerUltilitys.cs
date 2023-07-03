@@ -1,13 +1,21 @@
-using CatCity;
-using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using CatCity;
 
 [AddComponentMenu("Cat City/Manager Ultilitys")]
 public class ManagerUltilitys : MonoBehaviour
 {
     [SerializeField] private GameObject LoadSceneControllerPreFab;
     [SerializeField] private GameObject GameManagerPreFab;
+
+    public UnityEvent onStartEvent;
+
+    // Called in the first freame
+    private void Start()
+    {
+        onStartEvent.Invoke();
+    }
 
     /// <summary>
     /// Try found the Laod scene controller in scene and load a new scene, 
