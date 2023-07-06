@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 using CatCity.DialogueElements;
 using CatCity.Dialogue;
 using TMPro;
-using System;
 
 [AddComponentMenu("Cat City/Dialogue/Controller")]
 public class DialogueController : MonoBehaviour
@@ -198,8 +197,8 @@ public class DialogueController : MonoBehaviour
     {
         writerChoice = new ChoicesWriter(); // load a generic class of the UI Choices Object
 
-        // sets the value in UI
-        writerChoice.WriteChoice(choices, uiChoice);
+        writerChoice.WriteChoice(choices, uiChoice); // sets the value in UI
+        theDialogueUIObect.SetActive(false); // desactive dialogue UI
     }
 
     /// <summary>
@@ -219,6 +218,8 @@ public class DialogueController : MonoBehaviour
         writerChoice.CloseChoices(uiChoice);
         CurrentDalogueLineInUi = 0;
         LoadDialogueData(a);
+
+        theDialogueUIObect.SetActive(true); // active dialogue UI
         WriteDialogue(true);
     }
     #endregion
