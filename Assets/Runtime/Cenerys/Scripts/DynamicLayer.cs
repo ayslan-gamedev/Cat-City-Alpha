@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using CatCity;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [ExecuteInEditMode]
@@ -27,7 +28,15 @@ public class DynamicLayer : MonoBehaviour
         }
         else
         {
-            playerObject = GameObject.Find(EditorVariables.Player.ToString());
+            try
+            {
+                playerObject = FindAnyObjectByType<NavMeshAgent>().gameObject;
+            }
+            catch
+            {
+                playerObject = null;
+            }
+            
             spriteRender = GetComponent<SpriteRenderer>();
         }
     }

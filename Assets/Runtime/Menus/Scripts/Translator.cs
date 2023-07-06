@@ -20,12 +20,11 @@ public class Translator : MonoBehaviour
             return;
         }
 
-        if(GameObject.Find(EditorVariables.GAME_MANAGER.ToString()) != null)
+        try
         {
-            GameManager manager = GameObject.Find(EditorVariables.GAME_MANAGER.ToString()).GetComponent<GameManager>();
-            textObject.text = m_Text[manager.CurrentLanguage.index];
+            textObject.text = m_Text[FindAnyObjectByType<GameManager>().GetComponent<GameManager>().CurrentLanguage.index];
         }
-        else
+        catch
         {
             textObject.text = m_Text[0];
         }

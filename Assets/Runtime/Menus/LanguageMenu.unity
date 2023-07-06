@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadSceneControllerPreFab: {fileID: 1089224980921127720, guid: 9ea972ef8712c32419c15c7abef8ffca, type: 3}
+  GameManagerPreFab: {fileID: 784571494636050776, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
 --- !u!1 &367456135
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +976,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1468602009864244574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256939665544306175, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784571494636050776, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07f022d3dcdfc124fb494e672698f4dd, type: 3}
 --- !u!1 &8799497327336068615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,9 +1096,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SeletLanguage
+      - m_Target: {fileID: 302076028}
+        m_TargetAssemblyTypeName: ManagerUltilitys, Assembly-CSharp
+        m_MethodName: SetNewLanguage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1260,9 +1318,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SeletLanguage
+      - m_Target: {fileID: 302076028}
+        m_TargetAssemblyTypeName: ManagerUltilitys, Assembly-CSharp
+        m_MethodName: SetNewLanguage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1424,9 +1482,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SeletLanguage
+      - m_Target: {fileID: 302076028}
+        m_TargetAssemblyTypeName: ManagerUltilitys, Assembly-CSharp
+        m_MethodName: SetNewLanguage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
