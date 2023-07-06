@@ -1,8 +1,6 @@
 # Cat City - Uma História Sobre Sonhos (ALHPA)
 coming soon
 
-## SNAPSHOTS 
-
 ## STACK
-* Unity Engine (2019.3.18f1)
+* Unity Engine (2021.3.4f1<DX11>)
 * CSharp .Net Core
