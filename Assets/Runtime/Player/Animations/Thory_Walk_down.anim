@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Walk_down
+  m_Name: Thory_Walk_down
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,26 +20,19 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 487211362327491109, guid: c306dd570b4858f4aaad38f407451452,
-        type: 3}
+      value: {fileID: 487211362327491109, guid: c306dd570b4858f4aaad38f407451452, type: 3}
     - time: 0.083333336
-      value: {fileID: -2508634225784223026, guid: c306dd570b4858f4aaad38f407451452,
-        type: 3}
+      value: {fileID: -2508634225784223026, guid: c306dd570b4858f4aaad38f407451452, type: 3}
     - time: 0.16666667
-      value: {fileID: -8799898070330979378, guid: c306dd570b4858f4aaad38f407451452,
-        type: 3}
+      value: {fileID: -8799898070330979378, guid: c306dd570b4858f4aaad38f407451452, type: 3}
     - time: 0.25
-      value: {fileID: 6898148591805496348, guid: c306dd570b4858f4aaad38f407451452,
-        type: 3}
+      value: {fileID: 6898148591805496348, guid: c306dd570b4858f4aaad38f407451452, type: 3}
     - time: 0.33333334
-      value: {fileID: -3632219517037831023, guid: c306dd570b4858f4aaad38f407451452,
-        type: 3}
+      value: {fileID: -3632219517037831023, guid: c306dd570b4858f4aaad38f407451452, type: 3}
     - time: 0.41666666
-      value: {fileID: 3052867809313192220, guid: c306dd570b4858f4aaad38f407451452,
-        type: 3}
+      value: {fileID: 3052867809313192220, guid: c306dd570b4858f4aaad38f407451452, type: 3}
     - time: 0.5
-      value: {fileID: 487211362327491109, guid: c306dd570b4858f4aaad38f407451452,
-        type: 3}
+      value: {fileID: 487211362327491109, guid: c306dd570b4858f4aaad38f407451452, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212

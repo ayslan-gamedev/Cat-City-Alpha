@@ -280,6 +280,9 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Call the first Dialogue Event
+    /// </summary>
     private void StartDialogueEvent()
     {
         if(sceneEvents != null)

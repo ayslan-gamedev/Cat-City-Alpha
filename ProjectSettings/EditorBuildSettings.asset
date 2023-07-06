@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Runtime/Menus/LanguageMenu.unity
+    path: Assets/Runtime/Menus/Scenes/LanguageMenu.unity
     guid: dd0d36d9317043a43acb1ca24a48154e
   - enabled: 1
-    path: Assets/Runtime/Menus/MainMenu.unity
+    path: Assets/Runtime/Menus/Scenes/MainMenu.unity
     guid: 30ec42e901a93fd4abfe968649b4164e
   - enabled: 1
     path: Assets/Runtime/GameManager/LoadSystem/Scene/LoadScene.unity
@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Runtime/Cenerys/Scenes/School.unity
     guid: 09493f235f0c71b4f9a5c7bec86f4b6d
   - enabled: 1
-    path: Assets/Runtime/Menus/Credits.unity
+    path: Assets/Runtime/Menus/Scenes/Credits.unity
     guid: 474c059a2901eec4d8ecd19a974cb4b4
   m_configObjects: {}
