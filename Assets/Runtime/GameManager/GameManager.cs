@@ -31,52 +31,5 @@ namespace CatCity
 
         }
         #endregion
-
-        public void Test()
-        {
-            Debug.Log("AAAAAAAAAAAAAAAAAAA");
-        }
-
-        #region GameSettings
-        private int m_quality;
-
-        /// <summary>
-        /// Current game quality
-        /// </summary>
-        public int GameQuality 
-        { 
-            get { return m_quality; }
-            set
-            {
-                if(value != m_quality)
-                {
-                    QualitySettings.SetQualityLevel(value);
-                    m_quality = value;
-                }
-                else
-                {
-                    Debug.LogFormat(value + "is not a valid Quality");
-                }
-            }
-        }
-
-        private int m_resolution;
-
-        public int GameResolution
-        {
-            get { return m_resolution; }
-            set
-            {
-                if(value != m_resolution)
-                {
-                    Resolution resolution = Screen.resolutions[value];
-                    Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-                    PlayerPrefs.SetInt("ResolutionIndex", m_resolution);
-                    m_resolution = value;
-                }
-            }
-        }
-
-        #endregion
     }
 }

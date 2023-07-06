@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[AddComponentMenu("Cat City/MenuSettings")]
-[ExecuteInEditMode]
 public class MenuSettings : MonoBehaviour
 {
 
