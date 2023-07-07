@@ -9,7 +9,7 @@ public class AudioController : MonoBehaviour
     /// <summary>
     /// Audio to play
     /// </summary>
-    public AudioClip soundFX { private get; set; }
+    public AudioClip SoundFX { private get; set; }
 
     [SerializeField] private GameObject GameManagerPreFab;
 
@@ -23,8 +23,6 @@ public class AudioController : MonoBehaviour
     /// </summary>
     public void SetLocalVolume()
     {
-        Debug.Log("called");
-
         AudioSource Audio = GetComponent<AudioSource>();
 
         GameManager manager;
@@ -46,15 +44,15 @@ public class AudioController : MonoBehaviour
 
             Debug.LogWarning("GAME MANAGER NOT FOUND!"); return;
         }
-
+        
         switch(typeAudio)
         {
             case CatCity.AudioType.Music:
-                Audio.volume = manager.GameAudioSettings.MusicVolume;
+                Audio.volume = manager.GameAudioSettings.MusicVolume + manager.GameAudioSettings.MainVolume - 1;
                 break;
          
             case CatCity.AudioType.SoundEffect:
-                Audio.volume = manager.GameAudioSettings.SoundEffectVolume;
+                Audio.volume = manager.GameAudioSettings.SoundEffectVolume + manager.GameAudioSettings.MainVolume - 1;
                 break;
         }
     }

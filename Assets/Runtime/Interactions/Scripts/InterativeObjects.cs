@@ -12,7 +12,9 @@ public class InterativeObjects : MonoBehaviour
     public UnityEvent @event;
 
     public AudioType thisThypeAudio;
-    public AudioSource audio;
+    public AudioClip audio;
+    
+    public AudioSource audioSource;
 
     private byte onpened = 0;
 
@@ -27,8 +29,8 @@ public class InterativeObjects : MonoBehaviour
     {
         if(collision.CompareTag(PLAYER_TAG) && onpened == 0)
         {
-
             @event.Invoke();
+            audioSource.PlayOneShot(audio);
 
             switch(thisInteraction)
             {

@@ -38,11 +38,7 @@ namespace CatCity
                     break;
             }
 
-            AudioController[] audiosInScene = FindObjectsOfType<AudioController>();
-            for(int i = 0; i < audiosInScene.Length; i++)
-            {
-                audiosInScene[i].SetLocalVolume();
-            }
+            UpdateSceneAudio();
         }
 
         /// <summary>
@@ -52,6 +48,17 @@ namespace CatCity
         public void SetVolume(bool audioOn)
         {
             GameAudioSettings.EnableSound = audioOn;
+
+            UpdateSceneAudio();
+        }
+
+        private void UpdateSceneAudio()
+        {
+            AudioController[] audiosInScene = FindObjectsOfType<AudioController>();
+            for(int i = 0; i < audiosInScene.Length; i++)
+            {
+                audiosInScene[i].SetLocalVolume();
+            }
         }
 
         #region Language
@@ -62,7 +69,7 @@ namespace CatCity
         private void Start()
         {
             DontDestroyOnLoad(gameObject);
-            Debug.Log("a");
+            UpdateSceneAudio();
         }
 
         public void SetGameLanguage(int LanguageIndex)
