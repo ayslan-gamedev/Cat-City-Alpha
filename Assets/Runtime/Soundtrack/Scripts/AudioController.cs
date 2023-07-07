@@ -48,12 +48,14 @@ public class AudioController : MonoBehaviour
         switch(typeAudio)
         {
             case CatCity.AudioType.Music:
-                Audio.volume = manager.GameAudioSettings.MusicVolume + manager.GameAudioSettings.MainVolume - 1;
+                Audio.volume = manager.RuntimeAudioSettings.MusicVolume + manager.RuntimeAudioSettings.MainVolume - 1;
                 break;
          
             case CatCity.AudioType.SoundEffect:
-                Audio.volume = manager.GameAudioSettings.SoundEffectVolume + manager.GameAudioSettings.MainVolume - 1;
+                Audio.volume = manager.RuntimeAudioSettings.SoundEffectVolume + manager.RuntimeAudioSettings.MainVolume - 1;
                 break;
         }
+
+        Audio.mute = !manager.RuntimeAudioSettings.EnableSound;
     }
 }

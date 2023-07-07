@@ -22,7 +22,7 @@ public class Translator : MonoBehaviour
 
         try
         {
-            textObject.text = m_Text[FindAnyObjectByType<GameManager>().GetComponent<GameManager>().CurrentLanguage.index];
+            textObject.text = m_Text[FindAnyObjectByType<GameManager>().GetComponent<GameManager>().RuntimeLanguage.index];
         }
         catch
         {

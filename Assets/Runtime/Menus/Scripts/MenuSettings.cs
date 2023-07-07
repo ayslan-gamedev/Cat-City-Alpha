@@ -1,14 +1,20 @@
 using CatCity;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Linq;
+using System;
+using TMPro;
 
 public class MenuSettings : MonoBehaviour
 {
     #region Initialize
-    private void Awake()
+    private void Start()
     {
         SetGameManager();
-        SetCurrentValues();
+
+        SetCurrentAudioValues();
+        SetCurrentVideoValues();
     }
 
     [SerializeField] private GameObject GameManagerPreFab;
@@ -46,15 +52,15 @@ public class MenuSettings : MonoBehaviour
     /// <summary>
     /// Set the current values in Ui based in data on game manager
     /// </summary>
-    public void SetCurrentValues()
+    public void SetCurrentAudioValues()
     {
         if(m_manager != null)
         {
-            MainSlider.value = m_manager.GameAudioSettings.MainVolume;
-            MusicSlider.value = m_manager.GameAudioSettings.MusicVolume;
-            SoundEffecSlider.value = m_manager.GameAudioSettings.SoundEffectVolume;
+            MainSlider.value = m_manager.RuntimeAudioSettings.MainVolume;
+            MusicSlider.value = m_manager.RuntimeAudioSettings.MusicVolume;
+            SoundEffecSlider.value = m_manager.RuntimeAudioSettings.SoundEffectVolume;
 
-            audioToggle.enabled = m_manager.GameAudioSettings.EnableSound;
+            audioToggle.isOn = m_manager.RuntimeAudioSettings.EnableSound;
         }
         else
         {
@@ -68,14 +74,7 @@ public class MenuSettings : MonoBehaviour
     /// <param name="theSlider">slider volume</param>
     public void ChangeMainVolume()
     {
-        if(m_manager != null)
-        {
-            m_manager.SetVolume(CatCity.AudioType.Default, MainSlider.value);
-        }
-        else
-        {
-            SetGameManager();
-        }
+        m_manager.SetVolume(CatCity.AudioType.Default, MainSlider.value);
     }
 
     /// <summary>
@@ -84,14 +83,7 @@ public class MenuSettings : MonoBehaviour
     /// <param name="theSlider">slider volume</param>
     public void ChangeMusicVolume()
     {
-        if(m_manager != null)
-        {
-            m_manager.SetVolume(CatCity.AudioType.Music, MusicSlider.value);
-        }
-        else
-        {
-            SetGameManager();
-        }
+        m_manager.SetVolume(CatCity.AudioType.Music, MusicSlider.value);
     }
 
     /// <summary>
@@ -100,14 +92,7 @@ public class MenuSettings : MonoBehaviour
     /// <param name="theSlider">slider volume</param>
     public void ChangeSoundEffectVolume()
     {
-        if(m_manager != null)
-        {
-            m_manager.SetVolume(CatCity.AudioType.SoundEffect, SoundEffecSlider.value);
-        }
-        else
-        {
-            SetGameManager();
-        }
+        m_manager.SetVolume(CatCity.AudioType.SoundEffect, SoundEffecSlider.value);
     }
 
     /// <summary>
@@ -116,14 +101,120 @@ public class MenuSettings : MonoBehaviour
     /// <param name="toggle">button enabled</param>
     public void ChangeAudioEnabled()
     {
-        if(m_manager != null)
+        m_manager.SetVolume(audioToggle.isOn);
+    }
+    #endregion
+
+    #region Video
+    public TMP_Dropdown dropResolutions;
+    public TMP_Dropdown dropQualitys;
+
+    private List<string> Resolutions()
+    {
+        List<string> resolutions = new List<string>();
+        Resolution[] Listresolutions = Screen.resolutions;
+
+        foreach(Resolution r in Listresolutions)
         {
-            m_manager.SetVolume(audioToggle.isOn);
+            resolutions.Add(string.Format("{0} X {1}", r.width, r.height));
         }
-        else
-        {
-            SetGameManager();
-        }
+
+        return resolutions;
+    }
+
+    private List<string> Qualitys()
+    {
+        return QualitySettings.names.ToList();
+    }
+
+    private void SetCurrentVideoValues()
+    {
+        dropResolutions.AddOptions(Resolutions());
+        dropResolutions.value = Resolutions().Count - 1;
+
+        dropQualitys.AddOptions(Qualitys());
+        dropQualitys.value = QualitySettings.GetQualityLevel();
+    }
+
+    /// <summary>
+    /// Set the selected Resolution
+    /// </summary>
+    public void SetResolution()
+    {
+        string[] res = Resolutions()[dropResolutions.value].Split('X');
+        int w = Convert.ToInt16(res[0].Trim()); 
+        int h = Convert.ToInt16(res[1].Trim());
+        
+        Screen.SetResolution(w, h, Screen.fullScreen);
+
+        m_manager.RuntimeVideoSettings.resolution = new ScreenResolution(w, h);
+    }
+
+    /// <summary>
+    /// Set the selected Quality
+    /// </summary>
+    public void SetQuality()
+    {
+        QualitySettings.SetQualityLevel(dropQualitys.value, true);
+        m_manager.RuntimeVideoSettings.Quality = dropQualitys.value;
+    }
+
+    public Toggle fullScreeToggle;
+
+    /// <summary>
+    /// Turn ON/OFF WindowsMode
+    /// </summary>
+    public void SetWindowMode()
+    {
+        Screen.fullScreen = fullScreeToggle.isOn;
+        m_manager.RuntimeVideoSettings.EnabledFullScreen = fullScreeToggle.isOn;
+    }
+
+    public Toggle PostProcessingToggle;
+
+    /// <summary>
+    /// Turn ON/OFF PostProcessing
+    /// </summary>
+    public void SetPostProcessing()
+    {
+        Screen.fullScreen = PostProcessingToggle.isOn;
+        m_manager.RuntimeVideoSettings.EnabledPosprocessing = PostProcessingToggle.isOn;
+    }
+
+    public Toggle ParticlesToggle;
+
+    /// <summary>
+    /// Turn ON/OFF particles
+    /// </summary>
+    public void SetParticles()
+    {
+        Screen.fullScreen = ParticlesToggle.isOn;
+        m_manager.RuntimeVideoSettings.EnabledParticles = ParticlesToggle.isOn;
+
+    }
+    #endregion
+
+    #region Language
+    public ManagerUltilitys m_ultilitys;
+
+    private int language;
+
+    /// <summary>
+    /// Set a new language to load after restart scene
+    /// </summary>
+    /// <param name="sceneToLoad"></param>
+    public void SetNewLanguege(int language)
+    {
+        this.language = language;
+    }
+
+    /// <summary>
+    /// Restart scene
+    /// </summary>
+    public void Confirm()
+    {
+        m_ultilitys.SetNewLanguage(language);
+        m_ultilitys.LoadNewScene(m_manager.CurrentGameScene);
     }
     #endregion
 }
