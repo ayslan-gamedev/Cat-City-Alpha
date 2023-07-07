@@ -21,7 +21,7 @@ public class InterativeObjects : MonoBehaviour
     public enum InterationType
     {
         Collect = 0,
-        Talk = 1
+        Talk = 1,
     }
 
     // On Player Enter Colision

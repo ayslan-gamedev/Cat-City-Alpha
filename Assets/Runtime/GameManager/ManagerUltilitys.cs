@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using CatCity;
 
 [AddComponentMenu("Cat City/Manager Ultilitys")]
 public class ManagerUltilitys : MonoBehaviour
@@ -27,6 +26,24 @@ public class ManagerUltilitys : MonoBehaviour
         try
         {
             FindAnyObjectByType<LoadSceneController>().LoadNewScene(scene);
+
+            try
+            {
+                FindAnyObjectByType<GameManager>().CurrentGameScene = scene;
+            }
+            catch
+            {
+                if(GameManagerPreFab != null)
+                {
+                    Debug.LogWarning("GAME MANAFER NOT FOUND!\n A new manager has ben created to debugging mode");
+
+                    Instantiate(GameManagerPreFab);
+                    LoadNewScene(scene);
+                    return;
+                }
+
+                Debug.LogWarning("GAME MANAGER NOT FOUND!");
+            }
         }
         catch
         {
@@ -70,5 +87,13 @@ public class ManagerUltilitys : MonoBehaviour
 
             Debug.LogWarning("GAME MANAGER NOT FOUND!");
         }
+    }
+
+    /// <summary>
+    /// Close the game
+    /// </summary>
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

@@ -1,104 +1,191 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using CatCity;
 
-namespace CatCity
+public class GameManager : MonoBehaviour
 {
-    public class GameManager : MonoBehaviour
+    // Called in the first freame in scene
+    private void Awake()
     {
-        /// <summary>
-        /// Current Audio Settings
-        /// </summary>
-        public AudioSettings GameAudioSettings { get; set; } = new()
+        DontDestroyOnLoad(gameObject);
+
+        if(gameSettings != null)
         {
-            EnableSound = true,
-            MainVolume = 1,
-            MusicVolume = 1,
-            SoundEffectVolume = 1
-        };
-
-        /// <summary>
-        /// Set a new volume to GameAudioSettings
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="volume"></param>
-        public void SetVolume(AudioType type, float volume)
-        {
-            switch(type) 
-            {
-                case AudioType.Default:
-                    GameAudioSettings.MainVolume = volume;
-                    break;
-
-                case AudioType.Music:
-                    GameAudioSettings.MusicVolume = volume;
-                    break;
-
-                case AudioType.SoundEffect:
-                    GameAudioSettings.SoundEffectVolume = volume;
-                    break;
-            }
-
-            UpdateSceneAudio();
+            LoadSettingsData();
         }
-
-        /// <summary>
-        /// Set a new volume to GameAudioSettings
-        /// </summary>
-        /// <param name="audioOn"></param>
-        public void SetVolume(bool audioOn)
-        {
-            GameAudioSettings.EnableSound = audioOn;
-
-            UpdateSceneAudio();
-        }
-
-        private void UpdateSceneAudio()
-        {
-            AudioController[] audiosInScene = FindObjectsOfType<AudioController>();
-            for(int i = 0; i < audiosInScene.Length; i++)
-            {
-                audiosInScene[i].SetLocalVolume();
-            }
-        }
-
-        #region Language
-        public Languages LanguageList;
-
-        public Language CurrentLanguage;
-
-        private void Start()
-        {
-            DontDestroyOnLoad(gameObject);
-            UpdateSceneAudio();
-        }
-
-        public void SetGameLanguage(int LanguageIndex)
-        {
-            if(LanguageList != null)
-            {
-                CurrentLanguage = LanguageList.languages.ToArray()[LanguageIndex];
-            }
-            else
-            {
-                Debug.LogWarning("lanaguage List not seted!!");
-            }
-        }
-        #endregion
     }
 
-    [System.Serializable]
-    public class AudioSettings
+    /// <summary>
+    /// Name of current game scene
+    /// </summary>
+    public string CurrentGameScene { get; set; }
+
+    #region Settings
+    public GameSettings gameSettings;
+    
+    /// <summary>
+    /// Load all settings data 
+    /// </summary>
+    private void LoadSettingsData()
     {
-        public bool EnableSound;
-        [Range(0, 1)] public float MainVolume;
-        [Range(0, 1)] public float MusicVolume;
-        [Range(0, 1)] public float SoundEffectVolume;
+        RuntimeAudioSettings = gameSettings.audioSettings;
+        UpdateSceneAudio();
+
+        RuntimeVideoSettings = gameSettings.videoSettings;
+        UpdateGameVideoSettings();
+
+        if(gameSettings.language != null)
+        {
+            RuntimeLanguage = gameSettings.language;
+        }
     }
 
-    public enum AudioType
+    /// <summary>
+    /// Save all settings data
+    /// </summary>
+    public void SaveSettingsData()
     {
-        Default = 0,
-        Music = 1,
-        SoundEffect = 3
+        gameSettings.videoSettings = RuntimeVideoSettings;
+        gameSettings.audioSettings = RuntimeAudioSettings;
+        gameSettings.language = RuntimeLanguage;
     }
+    
+    #region Audio
+    private CatCity.AudioSettings run_audioSettings = new()
+    {
+        EnableSound = true,
+        MainVolume = 1,
+        MusicVolume = 1,
+        SoundEffectVolume = 1
+    };
+
+    /// <summary>
+    /// Current Audio Settings
+    /// </summary>
+    public CatCity.AudioSettings RuntimeAudioSettings 
+    {
+        get { return run_audioSettings; }
+        set 
+        {
+            run_audioSettings = value;
+            SaveSettingsData();
+        } 
+    }
+
+    /// <summary>
+    /// Set a new volume to GameAudioSettings
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="volume"></param>
+    public void SetVolume(CatCity.AudioType type, float volume)
+    {
+        switch(type)
+        {
+            case CatCity.AudioType.Default:
+                RuntimeAudioSettings.MainVolume = volume;
+                break;
+
+            case CatCity.AudioType.Music:
+                RuntimeAudioSettings.MusicVolume = volume;
+                break;
+
+            case CatCity.AudioType.SoundEffect:
+                RuntimeAudioSettings.SoundEffectVolume = volume;
+                break;
+        }
+
+        UpdateSceneAudio();
+    }
+
+    /// <summary>
+    /// Set a new volume to GameAudioSettings
+    /// </summary>
+    /// <param name="audioOn"></param>
+    public void SetVolume(bool audioOn)
+    {
+        RuntimeAudioSettings.EnableSound = audioOn;
+
+        UpdateSceneAudio();
+    }
+
+    /// <summary>
+    /// Update all audios volumes in scene
+    /// </summary>
+    private void UpdateSceneAudio()
+    {
+        AudioController[] audiosInScene = FindObjectsOfType<AudioController>();
+        for(int i = 0; i < audiosInScene.Length; i++)
+        {
+            audiosInScene[i].SetLocalVolume();
+        }
+    }
+    #endregion
+
+    #region Video
+    private VideoSettings run_videoSettings = new()
+    {
+        EnabledFullScreen = true,
+        EnabledPosprocessing = true,
+        EnabledParticles = true,
+        resolution = new ScreenResolution(0, 0),
+        Quality = 0
+    };
+
+    /// <summary>
+    /// Current Video Settings
+    /// </summary>
+    public VideoSettings RuntimeVideoSettings 
+    {
+        get
+        {
+            return run_videoSettings;
+        }
+        set
+        {
+            run_videoSettings = value;
+            SaveSettingsData();
+        }
+    }
+
+    private void UpdateGameVideoSettings()
+    {
+        Screen.SetResolution(RuntimeVideoSettings.resolution.w, RuntimeVideoSettings.resolution.h, RuntimeVideoSettings.EnabledFullScreen);
+        QualitySettings.SetQualityLevel(RuntimeVideoSettings.Quality, true);
+    }
+    #endregion
+
+    #region Language
+    public Languages LanguageList;
+
+    private Language currentLanguage;
+
+    /// <summary>
+    /// Current language in runtime game
+    /// </summary>
+    public Language RuntimeLanguage
+    {
+        get { return currentLanguage; }
+        set
+        {
+            currentLanguage = value;
+            SaveSettingsData();
+        }
+    }
+
+    /// <summary>
+    /// Change the language
+    /// </summary>
+    /// <param name="LanguageIndex"></param>
+    public void SetGameLanguage(int LanguageIndex)
+    {
+        if(LanguageList != null)
+        {
+            RuntimeLanguage = LanguageList.languages.ToArray()[LanguageIndex];
+        }
+        else
+        {
+            Debug.LogWarning("lanaguage List not seted!!");
+        }
+    }
+    #endregion
+    #endregion
 }

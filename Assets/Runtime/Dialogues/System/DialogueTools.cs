@@ -1,32 +1,26 @@
 ﻿using System.Threading.Tasks;
 using UnityEngine;
 using CatCity.DialogueElements;
-using CatCity;
 
 namespace CatCity.Dialogue
 {
     #region Reader
     public class DialogueReader
     {
-        private Language currentLanguage;
-
-        /// <summary>
-        /// Set the dialogue language
-        /// </summary>s
-        public void GetLanguage()
+        private Language GetCurrentLanguage()
         {
-            try
+            Language _language = new()
             {
-                currentLanguage = Object.FindObjectOfType<GameManager>().GetComponent<GameManager>().CurrentLanguage;
-            }
-            catch
+                name = "default",
+                index = 0
+            };
+
+            if(Object.FindAnyObjectByType<GameManager>().RuntimeLanguage != null)
             {
-                currentLanguage = new Language
-                {
-                    name = "default",
-                    index = 0
-                };
+                _language = Object.FindAnyObjectByType<GameManager>().RuntimeLanguage;
             }
+
+            return _language;
         }
 
         /// <summary>
@@ -37,8 +31,7 @@ namespace CatCity.Dialogue
         /// <returns>the lines of dialogue</returns>
         public DialogueLine[] DialogueLines(DialogueFolder dialogueFile, int dialogueId)
         {
-            GetLanguage();
-            return dialogueFile.gameDialoguesList.ToArray()[currentLanguage.index].gameDialogues.ToArray()[dialogueId].linesList.ToArray();
+            return dialogueFile.gameDialoguesList.ToArray()[GetCurrentLanguage().index].gameDialogues.ToArray()[dialogueId].linesList.ToArray();
         }
 
         /// <summary>
@@ -49,8 +42,7 @@ namespace CatCity.Dialogue
         /// <returns>the current choices of line dialogue</returns>
         public Choice[] DialogueChoices(DialogueFolder dialogueFile, int dialogueId)
         {
-            GetLanguage();
-            return dialogueFile.gameDialoguesList.ToArray()[currentLanguage.index].gameDialogues.ToArray()[dialogueId].choicesList.ToArray();
+            return dialogueFile.gameDialoguesList.ToArray()[GetCurrentLanguage().index].gameDialogues.ToArray()[dialogueId].choicesList.ToArray();
         }
 
         /// <summary>
@@ -61,8 +53,7 @@ namespace CatCity.Dialogue
         /// <returns>the final event of dialogue cell</returns>
         public string[] EventDialogue(DialogueFolder dialogueFile, int dialogueId)
         {
-            GetLanguage();
-            return dialogueFile.gameDialoguesList.ToArray()[currentLanguage.index].gameDialogues.ToArray()[dialogueId].@event.ToArray();
+            return dialogueFile.gameDialoguesList.ToArray()[GetCurrentLanguage().index].gameDialogues.ToArray()[dialogueId].@event.ToArray();
         }
     }
     #endregion
