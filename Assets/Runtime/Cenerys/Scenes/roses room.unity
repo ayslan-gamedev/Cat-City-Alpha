@@ -438,6 +438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d7991019af78541afda80da9212b8a, type: 3}
+--- !u!82 &175319667 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2664487775943132952, guid: 45d7991019af78541afda80da9212b8a, type: 3}
+  m_PrefabInstance: {fileID: 175319666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183620235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,11 +2029,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3791978233346459244, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
       propertyPath: m_Name
-      value: ursinho vermelho
+      value: ursinho verde
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 8300000, guid: 18d8b9b437d5a71419f8da064caec414, type: 3}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 175319667}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
       propertyPath: event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 675808709}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 675808710}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddUrsinho
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UrsionhosManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+      propertyPath: event.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: ursinho
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
@@ -2037,6 +2086,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3791978233346459243, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
   m_PrefabInstance: {fileID: 675808707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &675808709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3791978233346459244, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
+  m_PrefabInstance: {fileID: 675808707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &675808710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675808709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd906dfb5dc3efe488c1f663170e5bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &695621534 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 891768086837731125, guid: 0ba81c479ad396e4d9360981e4ccecd4, type: 3}
