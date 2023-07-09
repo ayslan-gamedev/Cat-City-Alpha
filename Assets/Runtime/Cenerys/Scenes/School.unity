@@ -2661,6 +2661,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1851493389}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 58451433bfbd71e4a94bcbccf188d63f, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - eventName: imgainacaoStarly
     event:
       m_PersistentCalls:
@@ -2701,6 +2713,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1851493389}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: fcda7c42e57b1604fa8aa0f8c87f8919, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - eventName: imgainacaoLoranje
     event:
       m_PersistentCalls:
@@ -2736,6 +2760,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 2142440842}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1851493389}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: cbf13ca978a37b24ba7dbc382bbcb08f, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3565,7 +3601,7 @@ PrefabInstance:
     - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
       propertyPath: audio
       value: 
-      objectReference: {fileID: 8300000, guid: 18d8b9b437d5a71419f8da064caec414, type: 3}
+      objectReference: {fileID: 8300000, guid: b2013070313dbf7478c0cddd536ee956, type: 3}
     - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
       propertyPath: audioSource
       value: 

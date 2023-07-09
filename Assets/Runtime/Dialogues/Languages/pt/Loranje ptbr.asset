@@ -20,7 +20,7 @@ MonoBehaviour:
       event:
       - cameraLoranje
     - speaker: Throy
-      text: "Eu n\xE3o sei Loranje... oque eu quero da vida...."
+      text: "Eu n\xE3o sei Loranje... o que eu quero da vida...."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event:
       - cameraThory

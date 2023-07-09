@@ -2034,7 +2034,7 @@ PrefabInstance:
     - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
       propertyPath: audio
       value: 
-      objectReference: {fileID: 8300000, guid: 18d8b9b437d5a71419f8da064caec414, type: 3}
+      objectReference: {fileID: 8300000, guid: b2013070313dbf7478c0cddd536ee956, type: 3}
     - target: {fileID: 3791978233346459247, guid: c5db68b84370dc145a44a279f9f1aa7f, type: 3}
       propertyPath: audioSource
       value: 
