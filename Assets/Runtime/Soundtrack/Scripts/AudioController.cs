@@ -35,14 +35,14 @@ public class AudioController : MonoBehaviour
         {
             if(GameManagerPreFab != null)
             {
-                Debug.LogWarning("GAME MANAFER NOT FOUND!\n A new manager has ben created to debugging mode");
+                Debug.LogWarning("Game Manager not found in current scene!\nA new temporary Game Manager has been created for debug mode");
 
                 Instantiate(GameManagerPreFab);
                 SetLocalVolume();
                 return;
             }
 
-            Debug.LogWarning("GAME MANAGER NOT FOUND!"); return;
+            Debug.LogWarning("Game Manager not found in current scene!"); return;
         }
         
         switch(typeAudio)
