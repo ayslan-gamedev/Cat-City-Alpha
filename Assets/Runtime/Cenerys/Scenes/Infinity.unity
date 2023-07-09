@@ -1440,8 +1440,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   thisThypeAudio: 0
-  audio: {fileID: 0}
-  audioSource: {fileID: 0}
+  audio: {fileID: 8300000, guid: 94ac35a9a5037904ca883c8cd2c62ff0, type: 3}
+  audioSource: {fileID: 1230961574}
 --- !u!50 &590835918
 Rigidbody2D:
   serializedVersion: 4
