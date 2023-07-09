@@ -30,7 +30,11 @@ public class InterativeObjects : MonoBehaviour
         if(collision.CompareTag(PLAYER_TAG) && onpened == 0)
         {
             @event.Invoke();
-            audioSource.PlayOneShot(audio);
+
+            if(audio != null)
+            {
+                audioSource.PlayOneShot(audio);
+            }
 
             switch(thisInteraction)
             {
