@@ -16,17 +16,18 @@ MonoBehaviour:
   - linesList:
     - speaker: Press
       text: "oh! voc\xEA me encontrou!"
-      protait: {fileID: 0}
-      event: []
+      protait: {fileID: 21300000, guid: b3469b8c5c9463b4ab7b98a630422d56, type: 3}
+      event:
+      - StartDialogue
     - speaker: Press
       text: "Prazer, meu nome \xE9 Press, fui eu quem criei... bem... digamos que
         eu fa\xE7o as coisas funcionarem como devem por aqui ^^ "
-      protait: {fileID: 0}
+      protait: {fileID: 21300000, guid: b3469b8c5c9463b4ab7b98a630422d56, type: 3}
       event: []
     - speaker: Press
       text: "Deu um trabalho da desgra\xE7a fazer esse jogo, foi provavelmente um
         dos projetos mais longos em que ja estive... "
-      protait: {fileID: 0}
+      protait: {fileID: 21300000, guid: b3469b8c5c9463b4ab7b98a630422d56, type: 3}
       event: []
     - speaker: Press
       text: "Ent\xE3o resolvi fazer esse easter eggy ^^ e ai de quem reclamar porque
@@ -49,6 +50,8 @@ MonoBehaviour:
       nextDialogueID: 5
     - text: "Porque voc\xEA se colocou no jogo?"
       nextDialogueID: 6
+    - text: "Quem s\xE3o aqueles outros dois furrys?"
+      nextDialogueID: 8
     - text: Sair
       nextDialogueID: 7
     event: []
@@ -68,6 +71,8 @@ MonoBehaviour:
       nextDialogueID: 5
     - text: "Porque voc\xEA se colocou no jogo?"
       nextDialogueID: 6
+    - text: "Quem s\xE3o aqueles outros dois furrys?"
+      nextDialogueID: 8
     - text: Sair
       nextDialogueID: 7
     event: []
@@ -205,6 +210,35 @@ MonoBehaviour:
       text: 'Irei voltar a programar agora.
 
         bom jogo :3'
+      protait: {fileID: 0}
+      event: []
+    choicesList: []
+    event:
+    - EndDialogue
+  - linesList:
+    - speaker: Press
+      text: 'Ah, aqueles dois atras de mim que nao falam nada? '
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: 'Quando eu contei que fiz esse easter eggy me fizeram deixar colocar
+        qualquer outro desenvolvedor furry que quisesse participar '
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Em cima de mim a direita est\xE1 a Nayara, uma artista"
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "e em baixo a direita est\xE1 meu chefe, Opuinguim 10, ele \xE9 maria
+        vai com as outras ent\xE3o colocou o sona dele em pixel art tamb\xE9m....
+        Que original ..."
+      protait: {fileID: 0}
+      event: []
+    - speaker: Press
+      text: "Por que eu estou em pixel art? ah, eu gosto desse sprite, mas voc\xEA
+        vai v\xEA mais ele em outros jogos, pode esperar outro easter eggy assim
+        em mais jogos da instal.... e da proxima eu n\xE3o conto nada >:("
       protait: {fileID: 0}
       event: []
     choicesList: []

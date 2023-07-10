@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: pressEaster
   m_EditorClassIdentifier: 
   gameDialoguesList:
+  - {fileID: 11400000, guid: 833117774b7fbcd42bc367be70ebba3c, type: 2}
   - {fileID: 11400000, guid: 782d2c10d8a00b44aa7fc6a416520b21, type: 2}
-  - {fileID: 11400000, guid: 782d2c10d8a00b44aa7fc6a416520b21, type: 2}
-  - {fileID: 11400000, guid: 782d2c10d8a00b44aa7fc6a416520b21, type: 2}
-  - {fileID: 11400000, guid: 782d2c10d8a00b44aa7fc6a416520b21, type: 2}
+  - {fileID: 11400000, guid: 38f484e781f5445468d75e21231ecce0, type: 2}
