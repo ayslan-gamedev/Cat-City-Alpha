@@ -1451,7 +1451,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Roteiro: \n\tJo\xE3o V\xEDtor Falc\xE3o (Opinguim10) \n\tVega"
+  m_text: "Roteiro: \n\tJo\xE3o V\xEDtor Falc\xE3o (Opinguim10) \n\tPaola Champi
+    (Vega Cat)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5bfd9a330036e8241b7b8699b4c2d7e5, type: 2}
   m_sharedMaterial: {fileID: -7939593780511949025, guid: 5bfd9a330036e8241b7b8699b4c2d7e5, type: 2}

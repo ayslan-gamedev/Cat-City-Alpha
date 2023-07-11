@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class DynamicLayer : MonoBehaviour
 {
     public float minPosY;
-    public int[] layerOrder;
+    public int[] layerOrder = new int[2];
 
     [SerializeField] private SpriteRenderer spriteRender;
     [SerializeField] private GameObject playerObject;
