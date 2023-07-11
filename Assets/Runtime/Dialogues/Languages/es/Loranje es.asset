@@ -126,9 +126,7 @@ MonoBehaviour:
     - nextScene
   - linesList:
     - speaker: Loranje
-      text: "17.Close Loranje\tThroy com rosto neutro.\tThroy: No lo s\xE9, pero
-        creo que es una gran idea intentarlo. Loranje: Espero que esta respuesta
-        te haya ayudadoThroy! Solo int\xE9ntalo\u2026 "
+      text: "Throy! Solo int\xE9ntalo\u2026 "
       protait: {fileID: 21300000, guid: 27afe3ec9ece2264c80af7905ef7e03d, type: 3}
       event: []
     choicesList: []
