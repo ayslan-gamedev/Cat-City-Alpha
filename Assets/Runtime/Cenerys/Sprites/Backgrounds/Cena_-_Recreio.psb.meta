@@ -1,0 +1,367 @@
+fileFormatVersion: 2
+guid: db129846aee6dc144983e5cbc2e1fccc
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Palco 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4454
+      y: 4
+      width: 1467
+      height: 603
+    spriteID: 863fd3d4dd0eae84a914812a5ffb5af8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4454, y: 4}
+    spritePosition: {x: 2960, y: 121}
+  - name: Bancos e mesas 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5929
+      y: 4
+      width: 872
+      height: 276
+    spriteID: a79a18daa7643774eb70bffbcff559c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5929, y: 4}
+    spritePosition: {x: 0, y: 252}
+  - name: Grade frente 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4454
+      y: 615
+      width: 2457
+      height: 255
+    spriteID: 37cca45026f8da949b74d5554cb8fdb2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4454, y: 615}
+    spritePosition: {x: 1985, y: 431}
+  - name: Gol 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5929
+      y: 288
+      width: 191
+      height: 288
+    spriteID: f35d7b38226066a4b828e453cbee8605
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5929, y: 288}
+    spritePosition: {x: 2043, y: 507}
+  - name: Grade 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4454
+      y: 878
+      width: 2411
+      height: 132
+    spriteID: 61532a7feaad8e34f85dd751a5e7d8ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4454, y: 878}
+    spritePosition: {x: 1986, y: 569}
+  - name: Pasta 2 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 4442
+      height: 1771
+    spriteID: cd47f2ec0caaae544ad32eebd3002ca2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: Fundo  Branco
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1783
+      width: 4442
+      height: 1771
+    spriteID: 66d0b2e72072bc7479218c73d148bbb5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1783}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Palco 2
+    spriteName: Palco 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 863fd3d4dd0eae84a914812a5ffb5af8
+    layerID: 10
+    mosaicPosition: {x: 4454, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bancos e mesas 2
+    spriteName: Bancos e mesas 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a79a18daa7643774eb70bffbcff559c0
+    layerID: 9
+    mosaicPosition: {x: 5929, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Quadra futebol
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 778e07d363e7aa74db5ea1400a1f52f3
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Grade frente 2
+    spriteName: Grade frente 2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 37cca45026f8da949b74d5554cb8fdb2
+    layerID: 7
+    mosaicPosition: {x: 4454, y: 615}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gol 2
+    spriteName: Gol 2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: f35d7b38226066a4b828e453cbee8605
+    layerID: 6
+    mosaicPosition: {x: 5929, y: 288}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Grade 2
+    spriteName: Grade 2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 61532a7feaad8e34f85dd751a5e7d8ed
+    layerID: 5
+    mosaicPosition: {x: 4454, y: 878}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pasta 2 2
+    spriteName: Pasta 2 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cd47f2ec0caaae544ad32eebd3002ca2
+    layerID: 3
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fundo  Branco
+    spriteName: Fundo  Branco
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 66d0b2e72072bc7479218c73d148bbb5
+    layerID: 2
+    mosaicPosition: {x: 4, y: 1783}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
