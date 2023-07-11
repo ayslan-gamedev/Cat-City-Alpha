@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     // Called in the first freame in scene
     private void Awake()
     {
+        Screen.SetResolution(1920, 1080, true);
+
         DontDestroyOnLoad(gameObject);
 
         if(gameSettings != null)
@@ -30,8 +32,8 @@ public class GameManager : MonoBehaviour
         RuntimeAudioSettings = gameSettings.audioSettings;
         UpdateSceneAudio();
 
-        RuntimeVideoSettings = gameSettings.videoSettings;
-        UpdateGameVideoSettings();
+        //RuntimeVideoSettings = gameSettings.videoSettings;
+        //UpdateGameVideoSettings();
 
         if(gameSettings.language != null)
         {
