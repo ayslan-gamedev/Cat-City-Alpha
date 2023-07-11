@@ -15,7 +15,7 @@ MonoBehaviour:
   gameDialogues:
   - linesList:
     - speaker: 
-      text: "T\xE3o r\xE1pido quando a velocidade dos ventiladores?"
+      text: "T\xE3o r\xE1pido quanto a velocidade dos ventiladores?"
       protait: {fileID: 0}
       event:
       - 
