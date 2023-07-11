@@ -83,30 +83,30 @@ MonoBehaviour:
       protait: {fileID: 0}
       event: []
     - speaker: Press
-      text: "Quem desenvolveu maior parte da lore foi meu chefe, Opuinguim, as artes
+      text: "Quem desenvolveu maior parte da lore foi meu chefe, Opinguim10, as artes
         foram dirigidas pelo Peixe, um rato de academia e artista, a trilha sonora
         foi feita por um Poney, por isso \xE9 meio magiquinha"
       protait: {fileID: 0}
       event: []
     - speaker: Press
-      text: "Al\xE9m disso tiveram varias outras pessoas envolvidas no game, so a
-        equipe de arte s\xE3o um monte ent\xE3o n\xE3o da para citar tudo aqui"
+      text: "Al\xE9m disso tiveram varias outras pessoas envolvidas no game, s\xF3
+        a equipe de arte s\xE3o um monte. Ent\xE3o n\xE3o da para citar tudo aqui"
       protait: {fileID: 0}
       event: []
     - speaker: Press
       text: "Mas minha colega de trabalho Marina, ela ficou na parte de Design na
-        metade do projeto... j\xE1 disse para ela que a arte n\xE3o compensa mas
+        metade do projeto... j\xE1 disse para ela que a arte n\xE3o compensa, mas
         ela nunca aprende - <- "
       protait: {fileID: 0}
       event: []
     - speaker: Press
       text: "Mas enfim, quanto a mim, eu quem elaborei grande parte da engenharia
         de software do jogo, fui responsavel pela cria\xE7\xE3o dos sistemas mais
-        complicadinhos como esse sistema de dalogo (que n\xE3o ficou como queria)"
+        complicadinhos como esse sistema de di\xE1logo (que n\xE3o ficou como queria)"
       protait: {fileID: 0}
       event: []
     - speaker: Press
-      text: "Al\xE9m disso eu estabeleci os padr\xF5es de versionanmento de software
+      text: "Al\xE9m disso eu estabeleci os padr\xF5es de versionamento de software
         e organiza\xE7\xE3o de codigo fonte do proejto, se por acaso voce estiver
         jogando num notebook da xuxa agrade\xE7a a mim"
       protait: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
     event: []
   - linesList:
     - speaker: Press
-      text: "A instal \xE9 um grupo de desenvolvedores indepente de jogos a qual
+      text: "A instal \xE9 um grupo de desenvolvedores independentes de jogos a qual
         eu fa\xE7o parte :3 "
       protait: {fileID: 0}
       event: []
@@ -178,7 +178,7 @@ MonoBehaviour:
     event: []
   - linesList:
     - speaker: Press
-      text: "N\xE3o, sou um elicptero de combate...\npor que? pare\xE7o um furry?????\n*lan\xE7o
+      text: "N\xE3o, sou um helic\xF3ptero de combate...\npor que? pare\xE7o um furry?????\n*lan\xE7o
         um missel em voc\xEA*"
       protait: {fileID: 0}
       event: []
@@ -217,7 +217,7 @@ MonoBehaviour:
     - EndDialogue
   - linesList:
     - speaker: Press
-      text: 'Ah, aqueles dois atras de mim que nao falam nada? '
+      text: "Ah, aqueles dois atras de mim que n\xE3o falam nada? "
       protait: {fileID: 0}
       event: []
     - speaker: Press

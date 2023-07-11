@@ -39,7 +39,7 @@ MonoBehaviour:
       text: Sea viajar al espacio...
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
-      - imgainacao blink
+      - imgainacaoBlink
     - speaker: Throy
       text: "Convertirse en presentador de televisi\xF3n..."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
