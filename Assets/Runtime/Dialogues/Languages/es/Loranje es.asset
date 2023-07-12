@@ -18,101 +18,96 @@ MonoBehaviour:
       text: "\xBFque pasa?"
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
       event:
-      - cameraLoranje
+      - CENA T1
     - speaker: Throy
       text: "No s\xE9... que quiero de la vida, loranje."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
-      event:
-      - cameraThory
+      event: []
     - speaker: Loranje
       text: "\xBFQu\xE9 quieres decir con eso, Throy?"
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
-      event:
-      - cameraLoranje
+      event: []
     - speaker: Throy
       text: "Siempre he visto a todos teniendo sue\xF1os incre\xEDbles, metas para
         s\xED mismos."
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event:
-      - cameraThory
+      - CENA T3
     - speaker: Throy
       text: Sea viajar al espacio...
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
-      - imgainacaoBlink
+      - ImaginationBlink
     - speaker: Throy
       text: "Convertirse en presentador de televisi\xF3n..."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - imgainacaoStarly
+      - ImaginationStarly
     - speaker: Throy
       text: "Comprender el mundo en las c\xE9lulas m\xE1s peque\xF1as..."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - imgainacaoLoranje
+      - ImaginationLoranje
     - speaker: Throy
       text: "\xBFPor qu\xE9 no tengo esto?"
       protait: {fileID: 21300000, guid: e00414ab38a196c47a20c1411d4cf8ae, type: 3}
       event:
-      - imgainacaoFim
+      - CENA T1
+      - ImaginationFIM
     - speaker: Throy
       text: "\xBFQui\xE9n soy?"
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - thorySentaECamera
+      - CENA T2
     - speaker: Throy
       text: "Solo quer\xEDa... ser como un furry normal..."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - thoryTriste
+      - CENA T4
     - speaker: Throy
       text: "Con sue\xF1os y esperanza..."
       protait: {fileID: 21300000, guid: f5977d5862a87754e81b5b58f9ab003f, type: 3}
-      event:
-      - thoryChora
+      event: []
     - speaker: Throy
       text: "Pero ni siquiera s\xE9 lo que me gusta."
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - thorySentaECamera
+      - CENA T1
     - speaker: Loranje
       text: "Throy\u2026"
       protait: {fileID: 21300000, guid: 35025eb21515db741831d74962998484, type: 3}
       event:
-      - cameraLoranje
+      - CENA TL1
     - speaker: Loranje
       text: "Primero, no tienes que ser como los dem\xE1s..."
       protait: {fileID: 21300000, guid: 27afe3ec9ece2264c80af7905ef7e03d, type: 3}
-      event:
-      - cameraLoranje
-      - loranjeAponta
+      event: []
     - speaker: Throy
       text: "Pero, \xBFc\xF3mo sabr\xE9 qu\xE9 hacer?"
       protait: {fileID: 21300000, guid: 1e1aa144561b54f41802e6e4680e6c8d, type: 3}
       event:
-      - thorySentaECamera
+      - CENA T1
     - speaker: Loranje
       text: Como tienes tantas ganas de averiguarlo, te doy una idea.
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
       event:
-      - cameraLoranje
+      - CENA TL1
     - speaker: Loranje
       text: "Si no puedes ayudarte a ti mismo porque no tienes un sue\xF1o, puedes
         ayudar a otros a cumplir sus sue\xF1os, mientras tratas de encontrar el tuyo
         tambi\xE9n.   "
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
-      event:
-      - cameraLoranje
+      event: []
     - speaker: Thory
       text: "No lo s\xE9, pero creo que es una gran idea intentarlo."
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - cameraLoranje
+      - CENA T2
     - speaker: Loranje
       text: Espero que esta respuesta te haya ayudado.
       protait: {fileID: 21300000, guid: 40564149d9bea8249bb8fc35690e8fee, type: 3}
       event:
-      - cameraLoranje
+      - CENA TL1
     choicesList:
     - text: Gracias
       nextDialogueID: 109

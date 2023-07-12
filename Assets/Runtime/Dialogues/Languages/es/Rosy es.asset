@@ -18,121 +18,129 @@ MonoBehaviour:
       text: "Mira, \xBFCatX + CatY es igual a cu\xE1nto?"
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
       event:
-      - cameraEstudando
+      - CenaRT1
     - speaker: Rosy
       text: "No lo s\xE9, \xA1pero desear\xEDa que existiera GatoT!"
       protait: {fileID: 21300000, guid: 962187fdcd32e9c46a6ba65c299d9c6c, type: 3}
       event:
-      - cameraRosyEstudando
+      - CameraRosy1
     - speaker: Rosy
       text: Ups!
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
-      event: []
+      event:
+      - CenaRT2
     - speaker: Throy
       text: ...
       protait: {fileID: 21300000, guid: aa3007b08c7ab00469917678754448ed, type: 3}
       event:
-      - cameraThory
+      - CameraThory1
     - speaker: Throy
       text: Bueno, volviendo... no te olvides que todo esto es igual a 10 + 15.
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
-      event: []
+      event:
+      - CenaRT3
+      - CameraThory1
     - speaker: Rosy (pensando)
       text: "Wow, \xBFse ha vuelto tonto o realmente no le gusto?"
       protait: {fileID: 21300000, guid: 791f519e10498434a9d1167040d49af2, type: 3}
       event:
-      - cameraRosyEstudando
+      - CameraRosy1
     - speaker: Rosy
       text: "Throy, \xBFpodemos detenernos un rato? \xA1Estoy cansada de estudiar
         tanto!"
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
-      event: []
+      event:
+      - CenaRT4
+      - CameraRosy1
     - speaker: Throy
       text: "Creo que est\xE1 bien, no tendr\xE1s ning\xFAn problema con eso, \xBFverdad?"
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - cameraThory
+      - CameraThory1
     - speaker: Rosy
       text: "Creo que no. Yo quer\xEDa hablar contigo."
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
       event:
-      - cameraRosy
+      - CenaRT5
     - speaker: Throy
       text: "\xBFQu\xE9 es?"
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
-      event:
-      - cameraThory
+      event: []
     - speaker: Rosy
       text: "\xBFTe... gusta alguien?"
       protait: {fileID: 21300000, guid: 631308520cb14b64c8dc69ecbab67dbe, type: 3}
       event:
-      - RosyLevanta_take1
+      - CenaRT6
     - speaker: Rosy
       text: "\xBFDe verdad?"
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - RosyLevanta_take2
+      - CenaRT7
     - speaker: Throy
       text: "\xA1Eh\u2026 s\xED! Pero... no s\xE9..."
       protait: {fileID: 21300000, guid: aa3007b08c7ab00469917678754448ed, type: 3}
-      event:
-      - cameraThory
-      - RosySenta
+      event: []
     - speaker: Rosy
       text: "Est\xE1 bien. Solo quer\xEDa, no s\xE9..."
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - cameraRosy1
+      - CenaRT8
     - speaker: Throy
       text: "\xBFQu\xE9?"
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - cameraThory
+      - CameraThory
     - speaker: Rosy
       text: "Me preguntaba si... si no hay nadie con quien ir al baile, quiz\xE1s
         podr\xEDamos..."
       protait: {fileID: 21300000, guid: 460b890de0fe2314dac0ff7636882e2b, type: 3}
       event:
-      - cameraRosy1
+      - CenaRT9
+      - CameraRosy
     - speaker: Throy
       text: "\xA1Me encantar\xEDa!"
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
-      - cameraThroy
+      - CenaRT10
+      - CameraThory
     - speaker: Rosy
       text: "\xBFLo juras que no te molestar\xE1?"
       protait: {fileID: 21300000, guid: 631308520cb14b64c8dc69ecbab67dbe, type: 3}
       event:
-      - cameraRosy1
+      - CameraRosy
     - speaker: Throy
       text: "Por supuesto que no, estoy muy contento con esta invitaci\xF3n."
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
-      - cameraThroy
+      - CameraThory
     - speaker: Rosy
       text: Gracias, Throy...
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - cameraRosy1
+      - CenaRT11
+      - CameraRosy
     - speaker: Throy
       text: Te lo agradezco...
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
       event:
-      - cameraThory
+      - CenaRT12
+      - CameraThory
     - speaker: Throy
       text: "\xBFQuieres volver a estudiar o yo deber\xEDa ir?"
       protait: {fileID: 21300000, guid: 6a6d0b6888e93614190a84692dba1b80, type: 3}
-      event: []
+      event:
+      - CenaRT13
     - speaker: Rosy
       text: Quiero continuar, creo que he me animado ahora.
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
       event:
       - cameraRosy1
+      - CameraRosy
     - speaker: Throy and Rosy
       text: Hahahahahahahahahaha
       protait: {fileID: 0}
       event:
-      - cenaFinal
+      - Risos
     choicesList: []
     event:
     - nextScene

@@ -18,15 +18,14 @@ namespace CatCity.Player
             if((int)playerDirection.x != 0 || (int)playerDirection.y != 0)
             {
                 currentAnimatorController.SetBool("Move", true);
-                currentPlayerRender.flipX = (int)playerDirection.x < 0 ? true : false;
             }
             else
             {
                 currentAnimatorController.SetBool("Move", false);
             }
 
-            currentAnimatorController.SetFloat("SpeedX", (int)playerDirection.x);
-            currentAnimatorController.SetFloat("SpeedY", (int)playerDirection.y);
+            currentAnimatorController.SetFloat("SpeedX", Mathf.Clamp((int)playerDirection.x, -1, 1));
+            currentAnimatorController.SetFloat("SpeedY", Mathf.Clamp((int)playerDirection.y, -1, 1));
         }
     }
 }

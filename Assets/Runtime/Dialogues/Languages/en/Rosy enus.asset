@@ -18,120 +18,128 @@ MonoBehaviour:
       text: Look, CatX + CatY equals how much?
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
       event:
-      - 
+      - CenaRT1
     - speaker: Rosy
       text: I don't know, but I wish there was a CatT!
       protait: {fileID: 21300000, guid: 962187fdcd32e9c46a6ba65c299d9c6c, type: 3}
       event:
-      - cameraRosyEstudando
+      - CameraRosy1
     - speaker: Rosy
       text: Oops!
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
-      event: []
+      event:
+      - CenaRT2
     - speaker: Throy
       text: ...
       protait: {fileID: 21300000, guid: aa3007b08c7ab00469917678754448ed, type: 3}
       event:
-      - cameraThory
+      - CameraThory1
     - speaker: Throy
       text: Well, coming back...Don't forget that all of this is equal to 10 + 15.
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
-      event: []
+      event:
+      - CenaRT3
+      - CameraThory1
     - speaker: Rosy (Thinking)
       text: Wow. Has he gotten silly or does he really not like me?
       protait: {fileID: 21300000, guid: 791f519e10498434a9d1167040d49af2, type: 3}
       event:
-      - cameraRosyEstudando
+      - CameraRosy1
     - speaker: Rosy
       text: Throy, can we stop for a while? I'm tired of studying so much!
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
-      event: []
+      event:
+      - CenaRT4
+      - CameraRosy1
     - speaker: Throy
       text: I think it's ok. You won't have any problems with that, will you?
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - cameraThory
+      - CameraThory1
     - speaker: Rosy
       text: "I don't think so. I\u2026 I wanted to talk to you."
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
       event:
-      - cameraRosy
+      - CenaRT5
     - speaker: Throy
       text: What is it?
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
-      event:
-      - cameraThory
+      event: []
     - speaker: Rosy
       text: Do you...like someone?
       protait: {fileID: 21300000, guid: 631308520cb14b64c8dc69ecbab67dbe, type: 3}
       event:
-      - RosyLevanta_take1
+      - CenaRT6
     - speaker: Rosy
       text: Like, for real?
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - RosyLevanta_take2
+      - CenaRT7
     - speaker: Throy
       text: Yeah...yes! But...I don't know...
       protait: {fileID: 21300000, guid: aa3007b08c7ab00469917678754448ed, type: 3}
-      event:
-      - cameraThory
-      - RosySenta
+      event: []
     - speaker: Rosy
       text: Okay. I just wanted, I don't know...
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - cameraRosy1
+      - CenaRT8
     - speaker: Throy
       text: What?
       protait: {fileID: 21300000, guid: 45373b1d94bb3f94bb006d219394cb22, type: 3}
       event:
-      - cameraThory
+      - CameraThory
     - speaker: Rosy
       text: I was wondering if... if there's no one to go to the prom with, maybe
         we could...
       protait: {fileID: 21300000, guid: 460b890de0fe2314dac0ff7636882e2b, type: 3}
       event:
-      - cameraRosy1
+      - CenaRT9
+      - CameraRosy
     - speaker: Throy
       text: I would love to!
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
-      - camera no throy
+      - CenaRT10
+      - CameraThory
     - speaker: Rosy
       text: Really? Won't it bother you?
       protait: {fileID: 21300000, guid: 631308520cb14b64c8dc69ecbab67dbe, type: 3}
       event:
-      - cameraRosy1
+      - CameraRosy
     - speaker: Throy
       text: Of course not. I'm very happy with this invitation.
       protait: {fileID: 21300000, guid: 3271be3c86da6ec498f836376caf3289, type: 3}
       event:
-      - cameraThroy
+      - CameraThory
     - speaker: Rosy
       text: Thank you, Throy.
       protait: {fileID: 21300000, guid: 7496209648686a54cb0ae97373b85c0c, type: 3}
       event:
-      - cameraRosy1
+      - CenaRT11
+      - CameraRosy
     - speaker: Throy
       text: I appreciate it.
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
       event:
-      - cameraThory
+      - CenaRT12
+      - CameraThory
     - speaker: Throy
       text: Do you want to go back studying or should I go?
       protait: {fileID: 21300000, guid: 6a6d0b6888e93614190a84692dba1b80, type: 3}
-      event: []
+      event:
+      - CenaRT13
     - speaker: Rosy
       text: I want to continue it. I think I've cheered up now.
       protait: {fileID: 21300000, guid: 46c3673345860b84781cf4f264721b66, type: 3}
       event:
       - cameraRosy1
+      - CameraRosy
     - speaker: Throy and Rosy
       text: Hahahahahahahahahaha
       protait: {fileID: 0}
       event:
-      - cenaFinal
+      - Risos
     choicesList: []
     event:
     - nextScene

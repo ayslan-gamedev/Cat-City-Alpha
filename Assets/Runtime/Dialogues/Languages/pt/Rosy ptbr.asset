@@ -64,8 +64,7 @@ MonoBehaviour:
     - speaker: Throy
       text: 'O que foi? '
       protait: {fileID: 21300000, guid: c89cc432ae7f8fb49b207c0d5efa3fa7, type: 3}
-      event:
-      - 
+      event: []
     - speaker: Rosy
       text: "Voc\xEA... gosta de algu\xE9m?"
       protait: {fileID: 21300000, guid: 631308520cb14b64c8dc69ecbab67dbe, type: 3}
